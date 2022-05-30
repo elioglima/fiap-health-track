@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="br.fiap.healthtrack.model.*" %>
+<%@page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,8 @@
 </head>
 <%		
 	UserModel user = (UserModel) request.getSession().getAttribute("user");
+	@SuppressWarnings("unchecked")
+	ArrayList<TypePhyactivityModel> listTypePhyActivity = (ArrayList<TypePhyactivityModel>) request.getSession().getAttribute("listTypePhyActivity");
 %>
 <body>    
     <div class="background">
@@ -30,24 +33,14 @@
 	   	        	<div class="grid-col w25p">Calorias</div>
 	       		</div>
 	       		<div class="grid-box-collumn">
-		       		<div class="grid-row">
-		   	        	<div class="grid-col w25p">01/05/2022 10:20</div>    	        
-		   	        	<div class="grid-col w25p">Corrida</div>
-		   	        	<div class="grid-col w25p">120</div>
-		   	        	<div class="grid-col w25p">1200</div>
-		       		</div>
-		       		<div class="grid-row">
-		   	        	<div class="grid-col w25p">02/05/2022 10:20</div>    	        
-		   	        	<div class="grid-col w25p">Natação</div>
-		   	        	<div class="grid-col w25p">40</div>
-		   	        	<div class="grid-col w25p">700</div>
-		       		</div>
-		       		<div class="grid-row">
-		   	        	<div class="grid-col w25p">03/05/2022 12:00</div>    	        
-		   	        	<div class="grid-col w25p">Natação</div>
-		   	        	<div class="grid-col w25p">40</div>
-		   	        	<div class="grid-col w25p">500</div>
-		       		</div>
+	       			<% for(TypePhyactivityModel value : listTypePhyActivity) { %>
+		       			<div class="grid-row">
+			   	        	<div class="grid-col w25p"><% out.print(value.getAtUpdate()); %></div>    	        
+			   	        	<div class="grid-col w25p"><% out.print(value.getDescription()); %></div>
+			   	        	<div class="grid-col w25p"><% out.print(value.getTimeActivityMinute()); %></div>
+			   	        	<div class="grid-col w25p"><% out.print(value.getValueCalorie()); %></div>
+			       		</div>
+					<%}%>
 		       	</div>
 	       	</div>  
         </div>

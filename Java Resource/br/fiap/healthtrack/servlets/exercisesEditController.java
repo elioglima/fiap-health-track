@@ -58,17 +58,35 @@ public class exercisesEditController extends RouterController {
 			if (!this.Connect()) return;			
 			
 			UserPhysicalActivity userPhysicalActivity = new UserPhysicalActivity(this.Connection, this.user.getId());
+			userPhysicalActivity.findAll();
+			
+			int typePhyActivityId = this.getParamInt("typePhyActivityId");			
+			TypePhyActivity typePhyActivity = new TypePhyActivity(this.Connection);
+			
+			if (!typePhyActivity.findId(typePhyActivityId)) {				
+				this.dispathFileExercisesEdit();
+				return;
+			}
+			
+			
+			double timeActivityMinute = this.getParamDoub("timeActivityMinute");			
+			double valueCalorie = timeActivityMinute * typePhyActivity.row.getValueCalorie();
 			
 			userPhysicalActivity.append();
+			userPhysicalActivity.row.setUserId(this.user.getId());
 			userPhysicalActivity.row.setTypePhyActivityId(this.getParamInt("typePhyActivityId"));
 			userPhysicalActivity.row.setTimeActivityMinute(this.getParamDoub("timeActivityMinute"));
-			userPhysicalActivity.row.setValueCalorie(this.getParamDoub("valueCalorie"));
+			userPhysicalActivity.row.setValueCalorie(valueCalorie);
+			
 			if (!userPhysicalActivity.post()) {
 				this.dispathExercisesEdit();
 				return;
 			}
 			
-			this.dispathFileExercises();		
+			this.dispathFileExercises();
+		} catch(Exception e) {
+			e.printStackTrace();
+				
 		} finally {
 			this.Close();
 		}

@@ -24,7 +24,7 @@
             <span id="logo">Health Track</span>            
         </div>        
         
-        <form class="form" action="edit" method="POST">
+        <form class="form" action="<%=request.getContextPath() %>/exercises/edit" method="POST">
         	<div class="homeText">
 	        	<div class="homeTextTitle">
     	        	<div class="name">Registrando Atividade</div>    	        
@@ -35,7 +35,7 @@
     	        	<div class="label-text">Tipo</div>    	        
     	        	<div class="label-value w50p">
 	    	        	<select id="typePhyActivityId" name="typePhyActivityId" >
-	        				<% for( TypePhyactivityModel value : listTypePhyActivity ){ %>  
+	        				<% for(TypePhyactivityModel value : listTypePhyActivity) { %>  
 	  							<option value="<% out.print(value.getId()); %>"><% out.print(value.getDescription()); %></option>
 							<%}%>
 	    	        	</select>    	        		
@@ -43,7 +43,7 @@
         		</div>
         		
             	<div class="row">
-    	        	<div class="label-text">Tempo</div>    	        
+    	        	<div class="label-text">Tempo (m)</div>    	        
     	        	<div class="label-value w50p">
     	        		<input type="text" name="timeActivityMinute" placeholder="informe seu email" value="<% out.println(userPhysicalActivity.getTimeActivityMinute()); %>">
     	        	</div>

@@ -12,25 +12,37 @@ import java.sql.SQLException;
 
 
 public class DbTypePhyActivity extends InstanceManager implements IController {
-	private String select = "select * from type_phyactivity ";
-	private String insert = "insert into type_phyactivity ";
-	private String update = "update type_phyactivity set ";	
+	private String select = "select * from TYPE_PHYACTIVITY ";
+	private String insert = "insert into TYPE_PHYACTIVITY ";
+	private String update = "update TYPE_PHYACTIVITY set ";	
 	public TypePhyactivityModel row;
 	
 	public DbTypePhyActivity(ConnectionManager connectionManager) {
-		this.row =  new TypePhyactivityModel();			
+		this.row = new TypePhyactivityModel();			
 		this.setConnectionManager(connectionManager);
 	}
 	
 	public boolean findAll() {
-		String sql = this.select;		
+		String sql = this.select;
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 
 			return false;
 		
-		this.loadData();
-		return this.getRecordCount() > 0;
+		this.loadData();		
+		return this.recordCount > 0; 		
+	}
+	
+	public boolean findId(int id) {
+		String sql = this.select.concat("where id = ").concat(Integer.toString(id));
+		System.out.println(sql);
+		this.clearSQL();
+		this.addSQL(sql);		
+		if (!this.executeSelect()) 
+			return false;
+		
+		this.loadData();		
+		return this.recordCount > 0;
 	}
 	
 	public void append() {

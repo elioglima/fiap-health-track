@@ -8,6 +8,7 @@ import br.fiap.healthtrack.db.*;
 */
 
 public class TypePhyActivity extends DbTypePhyActivity {
+	
 	public TypePhyActivity(ConnectionManager connectionManager) {
 		super(connectionManager);		
 	}
