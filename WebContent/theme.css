@@ -17,10 +17,20 @@ div {
 	color: #fff;
 }
 
-select {
-	border: 1px solid red;
-	padding: 20px 20px;
+select {	
 	width: 100%;
+	border: none;
+	outline: none;
+	border: 0.15em solid #ffffff;
+	border-bottom: 0.15em solid #ff474a;
+	font-size: 20px;
+	font-weight: 200!important;
+	padding: 10px 9px;
+	color: #000;
+}
+
+select:focus {
+	border: 0.15em solid rgb(171, 217, 255);
 }
 
 input {
@@ -29,10 +39,11 @@ input {
 	font-weight: 200;
 	color: #000;
 	padding: 20px 20px;
-	border: none;
 	outline: none;
 	border: 3px solid #fff;
-	width: 100%;
+	width: 100%!important;
+	border: 0.1em solid #ffffff;
+	border-bottom: 0.1em solid #ff474a;
 }
 
 input:focus {

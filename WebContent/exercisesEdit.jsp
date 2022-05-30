@@ -17,6 +17,7 @@
 	@SuppressWarnings("unchecked")
 	ArrayList<TypePhyactivityModel> listTypePhyActivity = (ArrayList<TypePhyactivityModel>) request.getSession().getAttribute("listTypePhyActivity");
 %>
+
 <body>    
     <div class="background">
         <div class="homeTitle">
@@ -33,7 +34,7 @@
            		<div class="row">
     	        	<div class="label-text">Tipo</div>    	        
     	        	<div class="label-value w50p">
-	    	        	<select name="typePhyActivityId" >
+	    	        	<select id="typePhyActivityId" name="typePhyActivityId" >
 	        				<% for( TypePhyactivityModel value : listTypePhyActivity ){ %>  
 	  							<option value="<% out.print(value.getId()); %>"><% out.print(value.getDescription()); %></option>
 							<%}%>
@@ -45,13 +46,6 @@
     	        	<div class="label-text">Tempo</div>    	        
     	        	<div class="label-value w50p">
     	        		<input type="text" name="timeActivityMinute" placeholder="informe seu email" value="<% out.println(userPhysicalActivity.getTimeActivityMinute()); %>">
-    	        	</div>
-        		</div>
-        		
-        		<div class="row">
-    	        	<div class="label-text">Calorias</div>    	        
-    	        	<div class="label-value w50p">
-    	        		<input type="text" name="valueCalorie" placeholder="informe seu telefone" value="<% out.println(userPhysicalActivity.getValueCalorie()); %>">
     	        	</div>
         		</div>
            		    

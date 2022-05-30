@@ -58,7 +58,10 @@ public class RouterController extends ViewController implements IRouterControler
 		dataSesion.setAttribute(name, value);
 		;
 	}
+	
+	
 
+	
 	public boolean doVerify() {
 		if (!SessionUtils.checked(this.request, this.response))
 			return false;
@@ -86,6 +89,26 @@ public class RouterController extends ViewController implements IRouterControler
 
 	protected void setMessageError(String messageError) {
 		this.messageError = messageError;
+	}
+	
+	public String getParameter(String name) {
+		return this.request.getParameter(name);		
+	}
+	
+	public int getParamInt(String name) {		
+		return this.request.getParameter(name) != null ? Integer.parseInt(this.request.getParameter(name)) : null;		
+	}
+	
+	public double getParamDoub(String name) {		
+		return this.request.getParameter(name) != null ? Double.parseDouble(this.request.getParameter(name)) : null;		
+	}
+	
+	public boolean getParamBoo(String name) {		
+		return this.request.getParameter(name) != null ? Boolean.parseBoolean(this.request.getParameter(name)) : null;		
+	}
+	
+	public String getParamStr(String name) {		
+		return this.request.getParameter(name) != null ? this.request.getParameter(name) : null;		
 	}
 
 }

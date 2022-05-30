@@ -54,10 +54,24 @@ public class exercisesEditController extends RouterController {
 		this.loadHttp(request, response);
 		if (!this.doVerify()) return;
 		
-//		HttpSession dataSesion = request.getSession();		
+		try {					
+			if (!this.Connect()) return;			
+			
+			UserPhysicalActivity userPhysicalActivity = new UserPhysicalActivity(this.Connection, this.user.getId());
+			
+			userPhysicalActivity.append();
+			userPhysicalActivity.row.setTypePhyActivityId(this.getParamInt("typePhyActivityId"));
+			userPhysicalActivity.row.setTimeActivityMinute(this.getParamDoub("timeActivityMinute"));
+			userPhysicalActivity.row.setValueCalorie(this.getParamDoub("valueCalorie"));
+			if (!userPhysicalActivity.post()) {
+				this.dispathExercisesEdit();
+				return;
+			}
+			
+			this.dispathFileExercises();		
+		} finally {
+			this.Close();
+		}
 		
-//		RequestDispatcher rd = request.getRequestDispatcher(request.getContextPath().concat("/profile/edit.jsp"));        
-//		rd.forward(request, response);
-		response.sendRedirect(request.getContextPath().concat("/home"));
 	}
 }
