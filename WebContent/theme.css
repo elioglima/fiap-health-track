@@ -70,6 +70,7 @@ button {
 button[class="info"] {
 	background-color: #ff474a;
 	color: #fff;
+
 }
 
 button[class="info"]:hover {
@@ -199,6 +200,7 @@ input[class="event"] {
 	flex-grow: 1;
 }
 
+
 input[class="event"]:focus {
 	background-color: #fff4f4;
 }
@@ -285,10 +287,47 @@ input[class="seareventch"]:-moz-placeholder {
 	color: #fdfdfd;
 }
 
-@media only screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 	.accessBase {
 		width: 900px;
 	}
+			.background .homeButton button {
+		font-size:22px!important;
+		justify-content:center;
+		align-items:center;
+		padding:30px 10px!important;
+	}
+	#logo {
+	font-size:1.5em!important;
+}
+}
+
+@media screen and (max-width: 950px) {
+
+		.background .homeButton button {
+		font-size:18px!important;
+		justify-content:center;
+		align-items:center;
+		padding:30px 10px!important;
+	}
+		#logo {
+	font-size:49px!important;
+}
+
+}
+
+@media screen and (max-width: 650px) {
+
+		.background .homeButton button {
+		font-size:15px!important;
+		justify-content:center;
+		align-items:center;
+		padding:25px 15px!important;
+	}
+		#logo {
+	font-size:43px!important;
+}
+	
 }
 
 .accessTitle {
@@ -494,10 +533,11 @@ input[class="seareventch"]:-moz-placeholder {
 
 
 .background .homeButton button {
-	padding: 30px 50px !important;
+	padding: 30px 50px ;
 	width: 32.5%!important;	
-	font-size: 28px!important;
+	font-size: 28px;
 }
+
 
 .background .homeAddress {
 	position: fixed;
@@ -848,6 +888,7 @@ input[class="seareventch"]:-moz-placeholder {
 .background .label-value {
 	color: black;	
 	font-size: 0.5em;	
+	width:100%;
 }
 
 .background .grid {
