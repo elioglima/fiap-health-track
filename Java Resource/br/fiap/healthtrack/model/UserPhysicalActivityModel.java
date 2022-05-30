@@ -18,13 +18,13 @@ public class UserPhysicalActivityModel extends Commons  {
 	
 	public boolean setResult(ResultSet result) {
 		try {
-			this.id = result.getInt("id");
-			this.userId = result.getInt("user_id");
-			this.typePhyActivityId = result.getInt("type_phyactivityid");
-			this.timeActivityMinute = result.getDouble("time_activityminute");
-			this.valueCalorie = result.getDouble("value_calorie");
-			this.atCreate = result.getDate("at_create");
-			this.atUpdate = result.getDate("at_update");
+			this.id = result.getInt("ID");
+			this.userId = result.getInt("USER_ID");
+			this.typePhyActivityId = result.getInt("TYPE_PHYACTIVITYID");
+			this.timeActivityMinute = result.getDouble("TIME_ACTIVITYMINUTE");
+			this.valueCalorie = result.getDouble("VALUE_CALORIE");
+			this.atCreate = result.getDate("AT_CREATE");
+			this.atUpdate = result.getDate("AT_UPDATE");
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();

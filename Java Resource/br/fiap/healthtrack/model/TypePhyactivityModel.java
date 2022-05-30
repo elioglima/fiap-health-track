@@ -14,12 +14,13 @@ import java.sql.SQLException;
 public class TypePhyactivityModel extends Commons {
 	private String description;
 	private double valueCalorie;
+	private double timeActivityMinute;
 	
 	public boolean setResult(ResultSet result) {
 		try {
 			this.id = result.getInt("id");
 			this.description = result.getString("description");
-			this.valueCalorie = result.getDouble("value_calorie");
+			this.valueCalorie = result.getDouble("value_calorie");			
 			this.atCreate = result.getDate("at_create");
 			this.atUpdate = result.getDate("at_update");
 			return true;
@@ -37,7 +38,7 @@ public class TypePhyactivityModel extends Commons {
 		return this.description;
 	}
 
-	protected void setDescription(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 	
@@ -45,8 +46,16 @@ public class TypePhyactivityModel extends Commons {
 		return this.valueCalorie;
 	}
 
-	protected void setValueCalorie(double valueCalorie) {
+	public void setValueCalorie(double valueCalorie) {
 		this.valueCalorie = valueCalorie;
+	}
+
+	public double getTimeActivityMinute() {
+		return timeActivityMinute;
+	}
+
+	public void setTimeActivityMinute(double timeActivityMinute) {
+		this.timeActivityMinute = timeActivityMinute;
 	}
 }
 

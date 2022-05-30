@@ -96,19 +96,19 @@ public class RouterController extends ViewController implements IRouterControler
 	}
 	
 	public int getParamInt(String name) {		
-		return this.request.getParameter(name) != null ? Integer.parseInt(this.request.getParameter(name)) : null;		
+		return this.request.getParameter(name) != null ? Integer.parseInt(this.request.getParameter(name)) : 0;		
 	}
 	
 	public double getParamDoub(String name) {		
-		return this.request.getParameter(name) != null ? Double.parseDouble(this.request.getParameter(name)) : null;		
+		return this.request.getParameter(name) != null ? Double.parseDouble(this.request.getParameter(name)) : 0;		
 	}
 	
 	public boolean getParamBoo(String name) {		
-		return this.request.getParameter(name) != null ? Boolean.parseBoolean(this.request.getParameter(name)) : null;		
+		return this.request.getParameter(name) != null ? Boolean.parseBoolean(this.request.getParameter(name)) : false;		
 	}
 	
 	public String getParamStr(String name) {		
-		return this.request.getParameter(name) != null ? this.request.getParameter(name) : null;		
+		return this.request.getParameter(name) != null ? this.request.getParameter(name) : "";		
 	}
 
 }

@@ -11,9 +11,9 @@ import java.sql.SQLException;
 */
 
 public class DbUserPhysicalActivity extends InstanceManager implements IController {
-	private String select = "select * from user_foodconsumed ";
-	private String insert = "insert into user_foodconsumed ";
-	private String update = "update user_foodconsumed set ";
+	private String select = "select * from USER_PHYSICALACTIVITY ";
+	private String insert = "insert into USER_PHYSICALACTIVITY ";
+	private String update = "update USER_PHYSICALACTIVITY set ";
 	public UserPhysicalActivityModel row;
 	
 	public DbUserPhysicalActivity(ConnectionManager connectionManager) {
@@ -40,8 +40,11 @@ public class DbUserPhysicalActivity extends InstanceManager implements IControll
 		try {
 			String sql = null;
 			if (this.getDbState() == "insert") {
-				sql = this.insert.concat(" (user_id, type_phyactivityid, time_activityminute, value_calorie, at_create, at_update)");
+				sql = this.insert.concat(" (USER_ID, TYPE_PHYACTIVITYID, TIME_ACTIVITYMINUTE, VALUE_CALORIE, AT_CREATE, AT_UPDATE)");
 				sql = sql.concat(" values (?,?,?,?,?,?)");
+				
+				System.out.println(sql);
+				System.out.println(this.row);
 				
 				pstmt = this.connectionManager.getInstance().prepareStatement(sql);
 				pstmt.setInt(1, this.row.getUserId());
@@ -52,8 +55,8 @@ public class DbUserPhysicalActivity extends InstanceManager implements IControll
 				pstmt.setDate(6, this.row.getAtCreateSQLDate());
 				
 			} else if (this.getDbState() == "edit") {								
-				sql = this.update.concat(" type_phyactivityid = ?, time_activityminute = ?, value_calorie = ?, at_update = ?");
-				sql = sql.concat(" where id = ? and user_id = ?");
+				sql = this.update.concat(" TYPE_PHYACTIVITYID = ?, TIME_ACTIVITYMINUTE = ?, VALUE_CALORIE = ?, AT_UPDATE = ?");
+				sql = sql.concat(" where ID = ? and USER_ID = ?");
 				
 				pstmt = this.connectionManager.getInstance().prepareStatement(sql);
 				pstmt.setInt(1, this.row.getTypePhyActivityId());
@@ -70,6 +73,7 @@ public class DbUserPhysicalActivity extends InstanceManager implements IControll
 			return true;												
 			
 		} catch (SQLException e) {
+			e.printStackTrace();
 			return false; 		
 		}
 	}
