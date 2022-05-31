@@ -47,9 +47,7 @@
     	        	<div class="label-value w50p">
     	        		<input type="text" name="timeActivityMinute" placeholder="informe seu email" value="<% out.println(userPhysicalActivity.getTimeActivityMinute()); %>">
     	        	</div>
-        		</div>
-           		    
-			           
+        		</div>			           
         </div>
         
         	<div class='homeButton'>        

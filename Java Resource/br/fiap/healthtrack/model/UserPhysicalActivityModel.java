@@ -3,8 +3,6 @@ package br.fiap.healthtrack.model;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import br.fiap.healthtrack.db.ConnectionManager;
-
 /* 
 	TITLE: CLASSE ATIVIDADE FISICA
 	DESCRIPTION: GERENCIAMENTO DE ATIVIDADE FISICA

@@ -23,7 +23,7 @@ public class exercisesController extends RouterController {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 		this.loadHttp(request, response);
 		if (!this.doVerify()) return;		
-		
+		this.setSession("listTypePhyActivity", null);
 		try {					
 			if (!this.Connect()) return;			
 			UserPhysicalActivity userPhysicalActivity = new UserPhysicalActivity(this.Connection, this.user.getId());
@@ -31,37 +31,27 @@ public class exercisesController extends RouterController {
 			userPhysicalActivity.findAll();
 			this.setSession("userPhysicalActivity", userPhysicalActivity.row);
 			
-			
 			ArrayList<TypePhyactivityModel> listTypePhyActivity = new ArrayList<TypePhyactivityModel>();
-			
-			do {
-				typePhyActivity.findId(userPhysicalActivity.row.getTypePhyActivityId());				
-				TypePhyactivityModel t = new TypePhyactivityModel();
-				t.setId(userPhysicalActivity.row.getId());
-				t.setDescription(typePhyActivity.row.getDescription());
-				t.setTimeActivityMinute(userPhysicalActivity.row.getTimeActivityMinute());				
-				t.setValueCalorie(userPhysicalActivity.row.getValueCalorie());
-				t.setAtUpdate(userPhysicalActivity.row.getAtUpdate());
-				listTypePhyActivity.add(t);
-			} while (userPhysicalActivity.next());
-			
-			
-			System.out.println(listTypePhyActivity);
+			if (userPhysicalActivity.getRecordCount() > 0) {
+				do {
+					typePhyActivity.findId(userPhysicalActivity.row.getTypePhyActivityId());
+					
+					TypePhyactivityModel t = new TypePhyactivityModel();
+					t.setId(userPhysicalActivity.row.getId());
+					t.setDescription(typePhyActivity.row.getDescription());
+					t.setTimeActivityMinute(userPhysicalActivity.row.getTimeActivityMinute());				
+					t.setValueCalorie(userPhysicalActivity.row.getValueCalorie());
+					t.setAtUpdate(userPhysicalActivity.row.getAtUpdate());
+					listTypePhyActivity.add(t);
+				} while (userPhysicalActivity.next());
+			} 
 			this.setSession("listTypePhyActivity", listTypePhyActivity);
+			
 			this.dispathFileExercises();		
 		} finally {
 			this.Close();
 		}
 	}
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.loadHttp(request, response);
-		if (!this.doVerify()) return;
-		
-//		HttpSession dataSesion = request.getSession();		
-		
-//		RequestDispatcher rd = request.getRequestDispatcher(request.getContextPath().concat("/profile/edit.jsp"));        
-//		rd.forward(request, response);
-		response.sendRedirect(request.getContextPath().concat("/home"));
-	}
+
 }

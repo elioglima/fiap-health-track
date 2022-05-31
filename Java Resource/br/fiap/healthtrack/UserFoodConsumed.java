@@ -8,9 +8,8 @@ import br.fiap.healthtrack.db.*;
 */
 
 public class UserFoodConsumed extends DbUserFoodConsumed {
-	
-	public UserFoodConsumed(int userId) {		
-		this.row.setUserId(userId);
-		this.findAll();
+	public UserFoodConsumed(ConnectionManager connectionManager, int userId) {		
+		super(connectionManager);
+		this.row.setUserId(userId);	
 	}
 }

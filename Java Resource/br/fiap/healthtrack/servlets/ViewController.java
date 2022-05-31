@@ -108,10 +108,82 @@ public class ViewController extends HttpServlet {
 		this.redirect("/exercises");
 	}
 	
+	public void dispathFileFood() {
+		this.dispath("/food.jsp");
+	}
+	
+	public void dispathFood() {
+		this.dispath("/food");
+	}
+	
+	public void redirFileFood() {
+		this.redirect("/food.jsp");
+	}
+	
+	public void redirFood() {
+		this.redirect("/food");
+	}
+	
 	public void dispathFileOffline() {
 		this.dispath("/offline.jsp");
 	}
 	
+	// food edit
+	
+	public void dispathFileFoodEdit() {
+		this.dispath("/foodEdit.jsp");
+	}
+	
+	public void dispathFoodEdit() {
+		this.dispath("/foodEdit");
+	}
+	
+	public void redirFileFoodEdit() {
+		this.redirect("/foodEdit.jsp");
+	}
+	
+	public void redirFoodEdit() {
+		this.redirect("/foodEdit");
+	}
+	
+	// measurements
+	
+	public void dispathFileMeasurememts() {
+		this.dispath("/measurements.jsp");
+	}
+	
+	public void dispathMeasurememts() {
+		this.dispath("/measurements");
+	}
+	
+	public void redirFileMeasurememts() {
+		this.redirect("/measurements.jsp");
+	}
+	
+	public void redirMeasurememts() {
+		this.redirect("/measurements");
+	}
+	
+	// measurements edit
+	
+	public void dispathFileMeasurememtsEdit() {
+		this.dispath("/measurementsEdit.jsp");
+	}
+	
+	public void dispathMeasurememtsEdit() {
+		this.dispath("/measurementsEdit");
+	}
+	
+	public void redirFileMeasurememtsEdit() {
+		this.redirect("/measurementsEdit.jsp");
+	}
+	
+	public void redirMeasurememtsEdit() {
+		this.redirect("/measurementsEdit");
+	}
+
+	
+	// offline
 	public void dispathOffline() {
 		this.dispath("/offline");
 	}
@@ -122,5 +194,23 @@ public class ViewController extends HttpServlet {
 	
 	public void redirOffline() {
 		this.redirect("/offline");
+	}
+	
+	// register
+	
+	public void dispathFileRegister() {
+		this.dispath("/register.jsp");
+	}
+	
+	public void dispathRegister() {
+		this.dispath("/register");
+	}
+	
+	public void redirFileRegister() {
+		this.redirect("/register.jsp");
+	}
+	
+	public void redirRegister() {
+		this.redirect("/register");
 	}
 }

@@ -1,17 +1,17 @@
 package br.fiap.healthtrack.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-import br.fiap.healthtrack.utils.SessionUtils;
-import jakarta.servlet.RequestDispatcher;
+import br.fiap.healthtrack.*;
+import br.fiap.healthtrack.model.TypeFoodConsumedModel;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/food/edit")
-public class foodEditController extends HttpServlet {
+public class foodEditController extends RouterController {
 	private static final long serialVersionUID = 1L;
 	
 	public foodEditController() {
@@ -20,27 +20,73 @@ public class foodEditController extends HttpServlet {
 	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("/food/edit.goGet");
+		this.loadHttp(request, response);
+		if (!this.doVerify()) return;
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/foodEdit.jsp");  
-        try {        	
-			rd.forward(request, response);
-		} catch (ServletException | IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Home error");
-			e.printStackTrace();
-		} 
+		try {					
+			if (!this.Connect()) return;
+			UserFoodConsumed userFoodConsumed = new UserFoodConsumed(this.Connection, this.user.getId());
+			TypeFoodConsumed typeFoodConsumed = new TypeFoodConsumed(this.Connection);
+			userFoodConsumed.findAll();
+			this.setSession("userFoodConsumed", userFoodConsumed.row);
+			
+			typeFoodConsumed.findAll();			
+			ArrayList<TypeFoodConsumedModel> listTypeFoodConsumed = new ArrayList<TypeFoodConsumedModel>();
+			
+			if (typeFoodConsumed.getRecordCount() > 0) {				
+				do {			
+					TypeFoodConsumedModel t = new TypeFoodConsumedModel();
+					t.setResult(typeFoodConsumed.getResultQuery());
+					listTypeFoodConsumed.add(t);				
+				} while (typeFoodConsumed.next());
+			}
+			
+			this.setSession("listTypeFoodConsumed", listTypeFoodConsumed);
+			this.dispathFileFoodEdit();		
+		} finally {
+			this.Close();
+		}
+		
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("/food/edit.doPost");
-
-		if (!SessionUtils.checked(request, response)) return;
+		this.loadHttp(request, response);
+		if (!this.doVerify()) return;
 		
-//		HttpSession dataSesion = request.getSession();		
-		
-//		RequestDispatcher rd = request.getRequestDispatcher(request.getContextPath().concat("/profile/edit.jsp"));        
-//		rd.forward(request, response);
-		response.sendRedirect(request.getContextPath().concat("/home"));
+		try {					
+			if (!this.Connect()) return;			
+			
+			UserFoodConsumed userFoodConsumed = new UserFoodConsumed(this.Connection, this.user.getId());
+			userFoodConsumed.findAll();
+			
+			int typeConsumedId = this.getParamInt("typeConsumedId");			
+			TypeFoodConsumed typeFoodConsumed = new TypeFoodConsumed(this.Connection);
+			
+			if (!typeFoodConsumed.findId(typeConsumedId)) {				
+				this.dispathFileFoodEdit();
+				return;
+			}
+			
+			int qtde = this.getParamInt("qtde");			
+			double valueCalorie = qtde * typeFoodConsumed.row.getValueCalorie();
+			
+			userFoodConsumed.append();
+			userFoodConsumed.row.setUserId(this.user.getId());
+			userFoodConsumed.row.setTypeConsumedId(typeConsumedId);
+			userFoodConsumed.row.setQtde(qtde);
+			userFoodConsumed.row.setValueCalorie(valueCalorie);
+			
+			if (!userFoodConsumed.post()) {
+				this.dispathFoodEdit();
+				return;
+			}
+			
+			this.dispathFileFood();
+		} catch(Exception e) {
+			e.printStackTrace();
+				
+		} finally {
+			this.Close();
+		}
 	}
 }

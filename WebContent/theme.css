@@ -2,6 +2,10 @@
 	url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap")
 	;
 
+.bgr1 {
+	background: rgb(239, 239, 239);
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -115,8 +119,8 @@ input::-webkit-input-placeholder {
 	/* Chrome/Opera/Safari */
 	font-family: "Montserrat", serif;
 	font-size: 16px;
-	font-weight: 500;
-	color: #000;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
 	letter-spacing: 2px;
 }
 
@@ -124,8 +128,8 @@ input::-moz-placeholder {
 	/* Firefox 19+ */
 	font-family: "Montserrat", serif;
 	font-size: 16px;
-	font-weight: 500;
-	color: #000;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
 	letter-spacing: 2px;
 }
 
@@ -133,8 +137,8 @@ input:-ms-input-placeholder {
 	/* IE 10+ */
 	font-family: "Montserrat", serif;
 	font-size: 16px;
-	font-weight: 500;
-	color: #000;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
 	letter-spacing: 2px;
 }
 
@@ -142,8 +146,8 @@ input:-moz-placeholder {
 	/* Firefox 18- */
 	font-family: "Montserrat", serif;
 	font-size: 16px;
-	font-weight: 500;
-	color: #000;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
 	letter-spacing: 2px;
 }
 
@@ -293,29 +297,31 @@ input[class="seareventch"]:-moz-placeholder {
 	.accessBase {
 		width: 900px;
 	}
-			.background .homeButton button {
+	
+	.background .homeButton button {
 		font-size:22px!important;
 		justify-content:center;
 		align-items:center;
-		padding:30px 10px!important;
+		padding:25px 10px!important;
 	}
+	
 	#logo {
-	font-size:1.5em!important;
-}
+		font-size:1.5em!important;
+	}
 }
 
 @media screen and (max-width: 950px) {
 
-		.background .homeButton button {
+	.background .homeButton button {
 		font-size:18px!important;
 		justify-content:center;
 		align-items:center;
-		padding:30px 10px!important;
+		padding:25px 10px!important;
 	}
-		#logo {
-	font-size:49px!important;
-}
-
+	
+	#logo {
+		font-size:49px!important;
+	}
 }
 
 @media screen and (max-width: 650px) {
@@ -516,28 +522,33 @@ input[class="seareventch"]:-moz-placeholder {
 
 .background .featureSummary .title {
 	flex-direction: column;
-	margin: 15px 0;	
+	margin: 0px 0;	
 }
 
 .background .featureSummary .title .primary {
 	color: black;
 	font-size: 0.7em;
-	margin: 25px 0;
-	
+	margin: 25px 0 10px 0;	
+}
+
+.background .featureSummary .title .secondary {
+	color: rgb(96, 96, 96);
+	font-size: 0.38em;
+	margin: 25px 0 10px 0;
+	padding-left: 3px;	
 }
 
 .background .featureSummary .title .name {
 	color: black;
 	font-size: 0.5em;	
-	
 }
 
 
-
 .background .homeButton button {
-	padding: 30px 50px ;
+	padding: 25px 50px ;
 	width: 32.5%!important;	
 	font-size: 28px;
+	border-radius: 10px;
 }
 
 
@@ -871,20 +882,22 @@ input[class="seareventch"]:-moz-placeholder {
 .background .form  input {
 	color: black;
 	flex-direction: column;
-	padding: 10px 15px;
+	padding: 12px 15px;
 	width: 350px;
 }
 
 .background .form .row {
-	color: black;	
+	flex-direction: flex;
+	color: black;
+	justify-content: flex-start;	
 	align-items: center;
 	margin: 0;
 }
 
 .background .label-text {
 	color: black;	
-	font-size: 0.5em;
-	width: 150px;
+	font-size: 0.4em;
+	width: 200px;	
 }
 
 .background .label-value {
@@ -930,8 +943,10 @@ input[class="seareventch"]:-moz-placeholder {
 }
 
 
-.w25p {
-	width: 25%;
+
+
+.w250px {
+	width: 200px!important;
 }
 
 .w50p {
@@ -939,4 +954,29 @@ input[class="seareventch"]:-moz-placeholder {
 	background: #000000;
 }
 
+.mt20 {
+	margin-top: 20px;
+}
 
+.mb50 {
+	margin-bottom: 50px!important;
+}
+
+.mt50 {
+	margin-top: 50px;
+}
+
+.border-bootom {
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.messageError {
+	color: rgb(255, 255, 128);
+	font-size: 0.5em;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+.color1 {
+	color: rgb(130, 0, 0)!important;
+}

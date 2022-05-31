@@ -9,10 +9,8 @@ import br.fiap.healthtrack.db.*;
 
 
 public class UserBloodPressure extends DbUserBloodPressure {
-	
-	public UserBloodPressure(int userId) {
-		
-		this.row.setUserId(userId);
-		this.findAll();
+	public UserBloodPressure(ConnectionManager connectionManager, int userId) {		
+		super(connectionManager);
+		this.row.setUserId(userId);	
 	}
 }

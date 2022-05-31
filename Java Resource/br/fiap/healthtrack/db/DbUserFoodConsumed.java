@@ -11,15 +11,16 @@ import java.sql.SQLException;
 */
 
 public class DbUserFoodConsumed extends InstanceManager implements IController {
-	private String select = "select * from user_foodconsumed ";
-	private String insert = "insert into user_foodconsumed ";
-	private String update = "update into user_foodconsumed set ";
-	protected UserFoodConsumedModel row;
+	private String select = "select * from USER_FOODCONSUMED ";
+	private String insert = "insert into USER_FOODCONSUMED ";
+	private String update = "update USER_FOODCONSUMED set ";
+	public UserFoodConsumedModel row;
 	
-	public DbUserFoodConsumed() {
+	public DbUserFoodConsumed(ConnectionManager connectionManager) {
+		this.setConnectionManager(connectionManager);
 		this.row = new UserFoodConsumedModel();
-	}
-	
+	}	
+
 	public void append() {
 		Date now = new Date();	        
 		java.sql.Date sqlDateNow = new java.sql.Date(now.getTime());	
@@ -33,13 +34,13 @@ public class DbUserFoodConsumed extends InstanceManager implements IController {
 		super.edit(); 		
 	}
 	
-	public boolean save() {
+	public boolean post() {
 		PreparedStatement pstmt;
 		try {
 			String sql = null;
 			if (this.getDbState() == "insert") {
-				sql = this.insert.concat(" (user_id, typeConsumedId, qtde, value_calorie, at_create, at_update)");
-				sql = sql.concat(" values (?,?,?,?)");
+				sql = this.insert.concat(" (USER_ID, TYPE_FOODCONSUMEDID, QTDE, VALUE_CALORIE, AT_CREATE, AT_UPDATE)");
+				sql = sql.concat(" values (?,?,?,?,?,?)");
 				
 				pstmt = this.connectionManager.getInstance().prepareStatement(sql);
 				pstmt.setInt(1, this.row.getUserId());
@@ -48,11 +49,10 @@ public class DbUserFoodConsumed extends InstanceManager implements IController {
 				pstmt.setDouble(4, this.row.getValueCalorie());
 				pstmt.setDate(5, this.row.getAtUpdateSQLDate());
 				pstmt.setDate(6, this.row.getAtCreateSQLDate());
-				return pstmt.executeUpdate() > 0;
 				
 			} else if (this.getDbState() == "edit") {								
-				sql = this.update.concat(" typeConsumedId = ?, qtde = ?, value_calorie = ?, at_update = ?");
-				sql = sql.concat(" where id = ? and user_id = ?");
+				sql = this.update.concat(" TYPE_FOODCONSUMEDID = ?, QTDE = ?, VALUE_CALORIE = ?, AT_UPDATE = ?");
+				sql = sql.concat(" where ID = ? and USER_ID = ?");
 				
 				pstmt = this.connectionManager.getInstance().prepareStatement(sql);
 				pstmt.setInt(1, this.row.getTypeConsumedId());
@@ -61,9 +61,12 @@ public class DbUserFoodConsumed extends InstanceManager implements IController {
 				pstmt.setDate(4, this.row.getAtUpdateSQLDate());
 				pstmt.setInt(5, this.row.getId());
 				pstmt.setInt(6, this.row.getUserId());
-				return pstmt.executeUpdate() > 0;				
+			} else {
+				return false;
 			}
-												
+			
+			if (pstmt.executeUpdate() == 0) return false;
+			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -100,5 +103,4 @@ public class DbUserFoodConsumed extends InstanceManager implements IController {
 		this.loadData();
 		return this.getRecordCount() > 0;
 	}
-
 }

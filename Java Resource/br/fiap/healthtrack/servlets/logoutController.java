@@ -14,6 +14,7 @@ public class logoutController extends RouterController {
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+		this.loadHttp(request, response);		
 		HttpSession dataSesion = request.getSession(false);
 		
 		if (dataSesion != null) 

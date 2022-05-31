@@ -43,9 +43,6 @@ public class DbUserPhysicalActivity extends InstanceManager implements IControll
 				sql = this.insert.concat(" (USER_ID, TYPE_PHYACTIVITYID, TIME_ACTIVITYMINUTE, VALUE_CALORIE, AT_CREATE, AT_UPDATE)");
 				sql = sql.concat(" values (?,?,?,?,?,?)");
 				
-				System.out.println(sql);
-				System.out.println(this.row);
-				
 				pstmt = this.connectionManager.getInstance().prepareStatement(sql);
 				pstmt.setInt(1, this.row.getUserId());
 				pstmt.setInt(2, this.row.getTypePhyActivityId());

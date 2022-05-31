@@ -24,6 +24,7 @@ public class UserModel extends Commons {
 			this.name = result.getString("name");
 			this.phoneMobile = result.getString("phone_mobile");
 			this.birthDate = result.getDate("birth_date");
+			this.password = result.getString("password");
 			this.verifyMail = result.getInt("verify_mail") == 1;
 			this.active = result.getInt("active") == 1;
 			this.atCreate = result.getDate("at_create");

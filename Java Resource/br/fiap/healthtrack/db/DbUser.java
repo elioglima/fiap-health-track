@@ -90,18 +90,16 @@ public abstract class DbUser extends InstanceManager implements IController {
 		try {	
 			String sql = null;
 			if (this.getDbState() == "insert") {						
-				sql = this.insert.concat(" (mail, name, phone_mobile, birth_date, at_create, at_update, active)");
-				sql = sql.concat(" values (?,?,?,?,?,?,?)");
-				
+				sql = this.insert.concat(" (mail, name, password, at_create, at_update, active)");
+				sql = sql.concat(" values (?,?,?,?,?,?)");
+				System.out.println(this.row.getPassword());
 				pstmt = this.connectionManager.getInstance().prepareStatement(sql);
 				pstmt.setString(1, this.row.getMail());
 				pstmt.setString(2, this.row.getName());
-				pstmt.setString(3, this.row.getPhoneMobile());
-				pstmt.setDate(4, (java.sql.Date) this.row.getBirthDate());
-				pstmt.setDate(5, this.row.getAtUpdateSQLDate());
-				pstmt.setDate(6, this.row.getAtCreateSQLDate());
-				pstmt.setInt(7, 1);				
-				if (pstmt.executeUpdate() == 0) return false;
+				pstmt.setString(3, this.row.getPassword());
+				pstmt.setDate(4, this.row.getAtUpdateSQLDate());
+				pstmt.setDate(5, this.row.getAtCreateSQLDate());
+				pstmt.setInt(6, 1);				
 				
 			} else if (this.getDbState() == "edit") {
 				sql = this.update.concat(" mail = ?, name = ?, phone_mobile = ?, at_update = ?, active = ?");
@@ -114,8 +112,10 @@ public abstract class DbUser extends InstanceManager implements IController {
 				pstmt.setDate(4, this.row.getAtUpdateSQLDate());
 				pstmt.setInt(5, this.row.getActive() ? 1 : 0);
 				pstmt.setInt(6, this.row.getId());
-				if (pstmt.executeUpdate() == 0) return false;
+			} else {
+				return false;
 			}
+			if (pstmt.executeUpdate() == 0) return false;
 			return true;						
 		} catch (SQLException e) {
 			return false; 		

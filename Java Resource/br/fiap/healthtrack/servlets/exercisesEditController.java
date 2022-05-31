@@ -83,7 +83,7 @@ public class exercisesEditController extends RouterController {
 				return;
 			}
 			
-			this.dispathFileExercises();
+			this.redirFileExercises();
 		} catch(Exception e) {
 			e.printStackTrace();
 				

@@ -15,7 +15,12 @@ public class DbTypeFoodConsumed extends InstanceManager implements IController {
 	private String select = "select * from type_foodconsumed ";
 	private String insert = "insert into type_foodconsumed ";
 	private String update = "update into type_foodconsumed set";	
-	protected TypeFoodConsumedModel row;	
+	public TypeFoodConsumedModel row;
+	
+	public DbTypeFoodConsumed(ConnectionManager connectionManager) {
+		this.row = new TypeFoodConsumedModel();			
+		this.setConnectionManager(connectionManager);
+	}
 	
 	public boolean findAll() {
 		String sql = this.select;		
@@ -26,6 +31,17 @@ public class DbTypeFoodConsumed extends InstanceManager implements IController {
 		
 		this.loadData();
 		return this.getRecordCount() > 0;
+	}
+	
+	public boolean findId(int id) {
+		String sql = this.select.concat("where id = ").concat(Integer.toString(id));		
+		this.clearSQL();
+		this.addSQL(sql);		
+		if (!this.executeSelect()) 
+			return false;
+		
+		this.loadData();		
+		return this.recordCount > 0;
 	}
 	
 	
@@ -65,7 +81,7 @@ public class DbTypeFoodConsumed extends InstanceManager implements IController {
 		return this.loadData();	
 	}
 	
-	public boolean save() {
+	public boolean post() {
 		PreparedStatement pstmt;
 		try {			
 			String sql = null;
@@ -97,5 +113,5 @@ public class DbTypeFoodConsumed extends InstanceManager implements IController {
 		}
 		
 		return false; 		
-	}
+	}	
 }

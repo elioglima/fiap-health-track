@@ -124,6 +124,6 @@ public class InstanceManager  {
 	}
 	
 	public int getRecordCount() {
-		return this.recordCount;
+		return this.resultQuery == null ? 0 : this.recordCount;
 	}
 }

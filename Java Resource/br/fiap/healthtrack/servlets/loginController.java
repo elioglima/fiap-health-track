@@ -17,13 +17,15 @@ public class loginController extends RouterController  {
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) {
-		this.loadHttp(request, response);				
+		this.loadHttp(request, response);
+		this.setSession("messageError", "");
 		this.dispathFileLogin();   
 	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession dataSesion = request.getSession();
 		this.loadHttp(request, response);		
+		this.setSession("messageError", "");
 		
 		try {					
 			if (!this.Connect()) return;			
@@ -34,8 +36,9 @@ public class loginController extends RouterController  {
 			
 			// ACESSO AO SISTEMA
 			if (!user.logIn(mail, password)) {
-				System.err.println("Usuário não localizado. senha ou password errado");				
-				dataSesion.setAttribute("isLogged", false);
+				this.setSession("messageError", "Usuário não localizado ou Senha errada!!");
+				this.setSession("isLogged", false);
+				this.dispathFileLogin();
 				return;
 			} 
 			

@@ -9,6 +9,9 @@
     <title>Início</title>    
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/theme.css">
 </head>
+<%		
+	String messageError = (String) request.getSession().getAttribute("messageError");
+%>
 <body>
 
     <div class="accessBackground"></div>
@@ -22,12 +25,17 @@
                 <div>
                     <a href="#">Esqueci minha senha</a>
                 </div>
+                
+                <div class="messageError">
+                    <% out.print(messageError); %>
+                </div>
 
+				
                 <button class='info'>Entrar</button>
             </form>
 
             <div>
-                <a href="#">Não possuo uma conta</a>
+                <a href="#" onclick="javascript:window.location.href='<% out.print(request.getContextPath().concat("/register")); %>'" >Não possuo uma conta</a>
             </div>
         </div>
 

@@ -8,5 +8,7 @@ import br.fiap.healthtrack.db.*;
 */
 
 public class TypeFoodConsumed extends DbTypeFoodConsumed {	
-	
+	public TypeFoodConsumed(ConnectionManager connectionManager) {
+		super(connectionManager);		
+	}
 }

@@ -1,5 +1,6 @@
 package br.fiap.healthtrack;
 
+import java.util.Base64;
 import java.util.Date;
 
 import br.fiap.healthtrack.db.ConnectionManager;
@@ -39,8 +40,15 @@ public class User extends DbUser {
 		this.isLogged = true;
 		this.load();
 		
-		// COMPARAR PASSWORD		
-		return true;
+		try {
+			String passwordEncoded = Base64.getUrlEncoder().encodeToString(password.getBytes());
+			System.err.println("CHECKED");
+			System.err.println(this.row.getPassword());
+			System.err.println(passwordEncoded);			
+			return passwordEncoded.equals(this.row.getPassword());
+		} catch (Exception e) {
+			return false;
+		}		
 	}	
 	
 	

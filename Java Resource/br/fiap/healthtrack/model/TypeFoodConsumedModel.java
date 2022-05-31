@@ -4,8 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TypeFoodConsumedModel extends Commons {
-	private String description;
+	private String description;	
 	private double valueCalorie;
+	private double qtde;
 	
 	public boolean setResult(ResultSet result) {
 		try {
@@ -23,13 +24,15 @@ public class TypeFoodConsumedModel extends Commons {
 
 	public void clear() {
 		this.description = "";
+		this.qtde = 0;
+		this.valueCalorie = 0;
 	}	
 	
 	public String getDescription() {
 		return this.description;
 	}
 
-	protected void setDescription(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 	
@@ -37,7 +40,15 @@ public class TypeFoodConsumedModel extends Commons {
 		return this.valueCalorie;
 	}
 
-	protected void setValueCalorie(double valueCalorie) {
+	public void setValueCalorie(double valueCalorie) {
 		this.valueCalorie = valueCalorie;
+	}
+
+	public double getQtde() {
+		return qtde;
+	}
+
+	public void setQtde(double qtde) {
+		this.qtde = qtde;
 	}
 }
