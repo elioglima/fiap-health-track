@@ -41,7 +41,7 @@
             	<div class="row">
     	        	<div class="label-text">Qtde</div>    	        
     	        	<div class="label-value w50p">
-    	        		<input type="number" name="qtde" value="<% out.println(userFoodConsumed.getQtde()); %>">
+    	        		<input type="number" class="w100perc" name="qtde" value="<% out.println(userFoodConsumed.getQtde()); %>">
     	        	</div>
         		</div>			           
         	</div>        
