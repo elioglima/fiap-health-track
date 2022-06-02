@@ -1,6 +1,6 @@
 # fiap-health-track
 
-[this teste]([https://github.com/elioglima/fiap-health-track/blob/main/database.sql])
+[this teste](https://github.com/elioglima/fiap-health-track/blob/main/database.sql)
 
 ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 
