@@ -71,6 +71,8 @@
 
 ![image](https://user-images.githubusercontent.com/6618004/171548750-25d094f3-5744-4b81-869e-4cbac16aff1f.png)
 
+## Bibliotecas utilizadas
+
 ![image](https://user-images.githubusercontent.com/6618004/171548788-b792a8fc-e56c-4f0e-9ace-42404fe6f102.png)
 
 
@@ -81,13 +83,3 @@
 ## Tema e Esticlos :: CSS
 
 ![image](https://user-images.githubusercontent.com/6618004/171548911-a00a9662-4981-46b2-917e-5f2570201f30.png)
-
-
-
-
-
-
-
-
-
-
