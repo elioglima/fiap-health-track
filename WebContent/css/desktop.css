@@ -1,0 +1,53 @@
+@media screen and (max-width: 1280px) {
+
+	.accessTec {
+		background: #128255;
+	}
+	
+	.accessTecDesktop {
+		display: flex;
+	}
+	
+	.accessTecTablet {
+		display: none;
+	}
+	
+	.accessTecMobile {
+		display: none;
+	}
+	
+	.titleDefaultTop {
+		font-size: 1.6em;	
+	}
+	
+	.subTitleTop {
+		font-size: 0.8em;	
+		line-height: 1em;
+	}
+	
+	.background .homeButton button {
+		font-size: 0.5em;
+	}
+
+	.background .grid .grid-col-title {
+		font-size: 0.3em;
+		letter-spacing: 2px;	
+	}
+	
+	.background .grid .grid-col {
+		font-size: 0.3em;
+		letter-spacing: 2px;
+	}	
+	
+	/* forms */
+	
+	
+	button[class="info"] {
+		font-size: 0.8em;
+	}
+	
+	input {
+		font-size: 0.7em;
+	}
+	
+}

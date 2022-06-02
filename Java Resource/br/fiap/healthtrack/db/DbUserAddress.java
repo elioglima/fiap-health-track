@@ -34,7 +34,7 @@ public class DbUserAddress extends InstanceManager implements IController {
 		super.edit();		
 	}
 	
-	public boolean save() {
+	public boolean post() {
 		PreparedStatement pstmt;
 		try {			
 			String sql = null;
@@ -101,8 +101,10 @@ public class DbUserAddress extends InstanceManager implements IController {
 		return this.loadData();	
 	}	
 	
-	public boolean findAll() {
+	public boolean findAll(int rowNum) {
 		String sql = this.select.concat("where user_id = ").concat(String.valueOf(this.row.getUserId()));
+		sql = sql.concat(" and rownum <= ").concat(String.valueOf(rowNum));
+		sql = sql.concat(" order by id desc");
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 
@@ -111,7 +113,4 @@ public class DbUserAddress extends InstanceManager implements IController {
 		this.loadData();
 		return this.getRecordCount() > 0; 			
 	}	
-	
-	
-
 }

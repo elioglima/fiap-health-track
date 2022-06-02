@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/theme.css">
 </head>
 <%		
-	UserModel user = (UserModel) request.getSession().getAttribute("user");
-	
+	UserModel user = (UserModel) request.getSession().getAttribute("user");	
+	String messageError = (String) request.getSession().getAttribute("messageError");
 %>
 <body>    
     <div class="background">
@@ -26,26 +26,31 @@
            		<div class="row">
     	        	<div class="label-text">Nome</div>    	        
     	        	<div class="label-value">
-    	        		<input type="text" name="name" placeholder="informe seu nome completo" value="<% out.println(user.getName()); %>">
+    	        		<input type="text" class="w100perc" name="name" placeholder="informe seu nome completo" value="<% out.println(user.getName()); %>">
     	        	</div>
         		</div>
         		
             	<div class="row">
     	        	<div class="label-text">e-mail</div>    	        
     	        	<div class="label-value">
-    	        		<input type="text" name="mail" placeholder="informe seu email" value="<% out.println(user.getMail()); %>">
+    	        		<input type="text" class="w100perc" name="mail" placeholder="informe seu email" value="<% out.println(user.getMail()); %>">
     	        	</div>
         		</div>
         		
         		<div class="row">
     	        	<div class="label-text">Telefone</div>    	        
     	        	<div class="label-value">
-    	        		<input type="text" name="phoneMobile" placeholder="informe seu telefone" value="<% out.println(user.getPhoneMobile()); %>">
+    	        		<input type="text" class="w100perc" name="phoneMobile" placeholder="informe seu telefone" value="<% out.println(user.getPhoneMobile()); %>">
     	        	</div>
         		</div>
            		    
 			           
         </div>
+           		<% if (messageError != null) { %>
+                	<div class="messageError2">
+                    	<% out.print(messageError); %>
+                	</div>
+                <% } %>
         
         	<div class='homeButton'>        
             	<button class="cancel" type="button" onclick="javascript:window.location.href='<% out.print(request.getContextPath().concat("/home")); %>'">Cancelar</button>

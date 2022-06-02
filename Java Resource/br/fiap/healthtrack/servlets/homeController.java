@@ -30,7 +30,7 @@ public class homeController extends RouterController {
 			if (!this.Connect()) return;			
 			UserPhysicalActivity userPhysicalActivity = new UserPhysicalActivity(this.Connection, this.user.getId());
 			TypePhyActivity typePhyActivity = new TypePhyActivity(this.Connection);
-			userPhysicalActivity.findAll();			
+			userPhysicalActivity.findAll(4);			
 			
 			ArrayList<TypePhyactivityModel> listTypePhyActivity = new ArrayList<TypePhyactivityModel>();
 			
@@ -47,13 +47,15 @@ public class homeController extends RouterController {
 				} while (userPhysicalActivity.next());
 			}
 			
+			
+			
 			this.setSession("listTypePhyActivity", listTypePhyActivity);
 			
 			
 			// FOOD 			
 			UserFoodConsumed userFoodConsumed = new UserFoodConsumed(this.Connection, this.user.getId());
 			TypeFoodConsumed typeFoodConsumed = new TypeFoodConsumed(this.Connection);
-			userFoodConsumed.findAll();
+			userFoodConsumed.findAll(4);
 			
 			ArrayList<TypeFoodConsumedModel> listTypeFoodConsumed = new ArrayList<TypeFoodConsumedModel>();
 			
@@ -75,7 +77,7 @@ public class homeController extends RouterController {
 			
 			// FOOD 			
 			UserBloodPressure userBloodPressure = new UserBloodPressure(this.Connection, this.user.getId());
-			userBloodPressure.findAll();
+			userBloodPressure.findAll(4);
 			ArrayList<UserBloodPressureModel> listUserBloodPressure = new ArrayList<UserBloodPressureModel>();
 			
 			if (userBloodPressure.getRecordCount() > 0) {				

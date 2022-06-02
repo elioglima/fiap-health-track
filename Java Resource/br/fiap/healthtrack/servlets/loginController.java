@@ -3,6 +3,7 @@ package br.fiap.healthtrack.servlets;
 import java.io.IOException;
 import br.fiap.healthtrack.User;
 import br.fiap.healthtrack.model.UserModel;
+import br.fiap.healthtrack.utils.ToolsValidation;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -34,9 +35,28 @@ public class loginController extends RouterController  {
 			String mail = (String) request.getParameter("mail");
 			String password = (String) request.getParameter("password");
 			
+			if (this.isNull(mail)) {
+				this.setError("Email não foi informado!");
+				this.dispathFileLogin();		
+				return;
+			} else if (!ToolsValidation.mailIsValide(mail)) {
+				this.setError("E-mail informado não é válido!");
+				this.dispathFileLogin();		
+				return;
+			} else if (this.isNull(password)) {
+				this.setError("Senha não foi informado!");
+				this.dispathFileLogin();		
+				return;
+			} else if (!ToolsValidation.passwordIsValide(password)) {
+				this.setError("Senha informada não é válido!");
+				this.dispathFileLogin();		
+				return;
+			} 
+			
+			
 			// ACESSO AO SISTEMA
 			if (!user.logIn(mail, password)) {
-				this.setSession("messageError", "Usuário não localizado ou Senha errada!!");
+				this.setSession("messageError", user.getMessageError());
 				this.setSession("isLogged", false);
 				this.dispathFileLogin();
 				return;

@@ -38,8 +38,10 @@ public abstract class DbUser extends InstanceManager implements IController {
 		return this.loadData();	
 	}
 
-	public boolean findAll() {
+	public boolean findAll(int rowNum) {
 		String sql = this.select;
+		sql = sql.concat(" and rownum <= ").concat(String.valueOf(rowNum));
+		sql = sql.concat(" order by id desc");
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 
@@ -51,6 +53,8 @@ public abstract class DbUser extends InstanceManager implements IController {
 	
 	public boolean FindMail(String mail) {		
 		String sql = this.select.concat("where mail = ").concat("'"+ mail + "'");
+		sql = sql.concat(" and rownum <= ").concat(String.valueOf(1));
+		System.out.println(sql);
 		this.clearSQL();
 		this.addSQL(sql);
 		if (!this.executeSelect()) 
@@ -62,6 +66,7 @@ public abstract class DbUser extends InstanceManager implements IController {
 	
 	public boolean FindId(int id) {		
 		String sql = this.select.concat("where id = ").concat(Integer.toString(id));
+		sql = sql.concat(" and rownum <= ").concat(String.valueOf(1));
 		this.clearSQL();
 		this.addSQL(sql);
 		if (!this.executeSelect()) 

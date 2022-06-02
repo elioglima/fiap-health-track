@@ -27,10 +27,10 @@ public class foodEditController extends RouterController {
 			if (!this.Connect()) return;
 			UserFoodConsumed userFoodConsumed = new UserFoodConsumed(this.Connection, this.user.getId());
 			TypeFoodConsumed typeFoodConsumed = new TypeFoodConsumed(this.Connection);
-			userFoodConsumed.findAll();
+			userFoodConsumed.findAll(100);
 			this.setSession("userFoodConsumed", userFoodConsumed.row);
 			
-			typeFoodConsumed.findAll();			
+			typeFoodConsumed.findAll(100);			
 			ArrayList<TypeFoodConsumedModel> listTypeFoodConsumed = new ArrayList<TypeFoodConsumedModel>();
 			
 			if (typeFoodConsumed.getRecordCount() > 0) {				
@@ -57,7 +57,7 @@ public class foodEditController extends RouterController {
 			if (!this.Connect()) return;			
 			
 			UserFoodConsumed userFoodConsumed = new UserFoodConsumed(this.Connection, this.user.getId());
-			userFoodConsumed.findAll();
+			userFoodConsumed.findAll(1);
 			
 			int typeConsumedId = this.getParamInt("typeConsumedId");			
 			TypeFoodConsumed typeFoodConsumed = new TypeFoodConsumed(this.Connection);
@@ -81,7 +81,7 @@ public class foodEditController extends RouterController {
 				return;
 			}
 			
-			this.dispathFileFood();
+			this.dispathFood();
 		} catch(Exception e) {
 			e.printStackTrace();
 				

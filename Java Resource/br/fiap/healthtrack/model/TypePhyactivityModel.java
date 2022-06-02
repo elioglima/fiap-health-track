@@ -18,6 +18,7 @@ public class TypePhyactivityModel extends Commons {
 	
 	public boolean setResult(ResultSet result) {
 		try {
+			if (result == null) return false;
 			this.id = result.getInt("id");
 			this.description = result.getString("description");
 			this.valueCalorie = result.getDouble("value_calorie");			

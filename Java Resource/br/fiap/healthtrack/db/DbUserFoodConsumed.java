@@ -91,10 +91,11 @@ public class DbUserFoodConsumed extends InstanceManager implements IController {
 		super.firstResults();		
 		return this.loadData();
 	}
-
-	@Override
-	public boolean findAll() {
+	
+	public boolean findAll(int rowNum ) {
 		String sql = this.select.concat("where user_id = ").concat(String.valueOf(this.row.getUserId()));
+		sql = sql.concat(" and rownum <= ").concat(String.valueOf(rowNum));
+		sql = sql.concat(" order by id desc");
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 

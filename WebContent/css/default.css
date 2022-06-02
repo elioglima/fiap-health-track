@@ -1,0 +1,701 @@
+.accessTec {
+	background: rgb(128, 128, 0);
+	height: 10px;
+	font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #000;
+	font-family: "Montserrat", serif;
+	color: #fff;
+	font-size: 48px;
+}
+
+div {
+	display: flex;
+	flex-direction: row;
+	color: #fff;
+}
+
+
+.pt-15 {
+	padding-top: 15px;
+}
+
+.pb-15 {
+	padding-bottom: 15px;
+}
+
+.mb-15 {
+	margin-bottom: 15px;
+}
+
+.mb-20 {
+	margin-bottom: 15px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.base {
+	width: 100vw;
+	overflow: hidden;
+}
+
+.accessBackground {
+	height: 100vh;
+	background: url("../assets/photoDefault.svg");
+	opacity: 0.6;
+	background-repeat: no-repeat;
+	background-position: -270px -1px;
+	background-size: auto 100%;
+}
+
+.accessBase {
+	flex-direction: column;
+	font-family: "Montserrat", serif;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+	font-weight: 800;
+	color: #fdfdfd;
+}
+
+
+
+.accessForm {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.accessForm > form {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 4px;
+}
+
+.accessForm > form>input {
+	margin-bottom: 2px;
+}
+
+.accessForm > form > button {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.accessForm > form > :nth-child(3) {
+	justify-content: flex-end;
+	padding-top: 3px;
+	padding-right: 3px;
+	margin-bottom: 40px;
+}
+
+.background {
+	flex-direction: column;
+	padding: 50px 10%;
+	margin: 40px 40px;
+	background-color: #fff;
+}
+
+
+.homeTitle {
+	justify-content: center;
+	align-items: center;
+	font-family: "Montserrat", serif;
+	padding: 16px 16px;
+	margin: 0 13px;
+	margin-top: 15px;
+}
+
+.icoMenu {
+	width: 60px;
+	height: 60px;
+}
+
+.homePageActive {
+	color: #ff473a;
+	font-size: 0.5em;
+	text-align: center;
+}
+
+.homeTitle .img {
+	width: 30%;
+	height: 40px;
+	justify-content: flex-end;
+}
+
+.homeTitle span {
+	font-family: "Montserrat", serif;
+	font-size: 2em;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	color: black;
+	margin-bottom: 20px;
+}
+
+.background .homePhoto {
+	flex-direction: column;	
+}
+
+.background .homeText {
+	color: black;
+	flex-direction: column;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #979797;
+	padding: 15px 5px;	
+}
+
+.background .homeText .homeTextName {
+	color: black;
+	font-size: 0.5em;
+	font-weight: 200;
+	margin: 5px 0;
+}
+
+.background .homeText .homeTextName .label {
+	color: black;
+	font-size: 1em;
+	font-weight: 200;
+	width: 110px;	
+}
+
+.background .homeText .homeTextName .value {
+	color: black;
+	font-size: 1em;
+	font-weight: 200;
+	margin-left: 10px;	
+}
+
+.background .homeText .homeTextName .button {
+	color: #ff473a;
+	font-size: 1em;
+	font-weight: 500;	
+	cursor: pointer;	
+}
+
+.background .homeText .homeTextTitle {
+	color: black;
+	font-size: 0.8em;	
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;	 
+}
+
+.background .homeText .homeTextTitle  .name {
+	color: #ff473a;
+	font-size: 0.9em;	
+}
+
+.background .homeText .homeTextTitle  .button {
+	color: #ff473a;
+	font-size: 0.6em;	
+	cursor:pointer;
+}
+
+
+.background .homeText .homeTextLocation {
+	color: #ff473a;
+	font-size: 0.8em;
+	margin: 15px 0;
+}
+
+.background .homeText .homeTextTitle {
+	color: #ff473a;
+	font-size: 0.8em;
+	margin: 15px 0;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+.background .homeText .homeTextScore {
+	color: black;
+	font-size: 0.3em;
+	margin: 0px 15px;
+	margin-bottom: 50px;
+}
+
+
+.background .featureSummary {
+	flex-direction: column;		
+}
+
+.background .featureSummary .title {
+	flex-direction: column;
+	margin: 0px 0;	
+}
+
+.background .featureSummary .title .primary {
+	color: black;
+	font-size: 0.7em;
+	margin: 25px 0 10px 0;	
+}
+
+.background .featureSummary .title .secondary {
+	color: rgb(96, 96, 96);
+	font-size: 0.38em;
+	margin: 25px 0 10px 0;
+	padding-left: 3px;	
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.background .featureSummary .title .name {
+	color: black;
+	font-size: 0.5em;	
+}
+
+.background .homeAddress {
+	position: fixed;
+	bottom: 0px;
+}
+
+.background .homeAddress .homeAddressBase {
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.background .homeAddress img {
+	margin: 10px 10px;
+}
+
+.background .homeAddress span {
+	font-size: 0.3em;
+	color: #ff473a;
+	line-height: 20px;
+}
+
+.buttonSelected {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgb(243, 243, 243);
+	color: black;
+	padding: 25px 0;
+	cursor: pointer;
+}
+
+.buttonSelected>label {
+	display: flex;
+	margin-left: 50px;
+	font-size: 0.62em;
+}
+
+.buttonSelected>img {
+	display: flex;
+	margin-right: 50px;
+	width: 25px;
+	height: 25px;
+}
+
+.registerButtonSave {
+	display: flex;
+	flex-direction: column;
+}
+
+.registerButtonSave button {
+	margin: 120px 80px 0 80px;
+}
+
+
+.background .frequencyText {
+	color: black;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+.background .frequencyText .frequencyTextTitle {
+	color: black;
+	font-size: 0.9em;
+	font-weight: 700;
+	margin: 15px 15px;
+}
+
+.background .frequencyText .frequencyTextText {
+	color: rgb(71, 71, 71);
+	font-weight: 200;
+	text-align: justify;
+	font-size: 0.3em;
+	margin: 10px 15px;
+}
+
+.background .form {
+	color: black;
+	flex-direction: column;
+	margin: 5px 15px;
+}
+
+.background .form  input {
+	color: rgb(255, 0, 128);
+	padding: 12px 15px;
+}
+
+.background .form .row {
+	flex-direction: flex;
+	color: black;
+	justify-content: flex-start;	
+	align-items: center;
+	margin: 0;
+}
+
+.background .label-text {
+	color: black;	
+	font-size: 0.4em;
+	width: 200px;	
+}
+
+.background .label-value {
+	color: black;	
+	font-size: 0.5em;	
+	width:100%;
+}
+
+.background .grid {
+	display: flex;
+	flex-direction: column;		
+}
+
+.background .grid .grid-title {
+	flex-direction: row;	
+	border-bottom: 1px solid #979797;
+}
+
+
+
+.background .grid .grid-col-title {
+	flex-grow: 10;
+	font-size: 0.4em; 
+	text-align: left;
+	margin: 4px 4px;
+	background: #ff474a!important;
+	color: #ffffff;
+	font-weight: bold;
+	letter-spacing: 2px;	
+}
+
+.background .grid .grid-col-title2 {
+	display: none;
+	flex-grow: 10;
+	font-size: 0.4em; 
+	text-align: left;
+	margin: 4px 4px;
+	background: #ff474a!important;	
+	color: #ffffff;	
+	font-weight: bold;	
+	letter-spacing: 2px;
+}
+
+.background .grid .grid-col {
+	flex-grow: 10;
+	font-size: 0.3em; 
+	text-align: left;
+	margin: 4px 4px;
+	color: #000000;	
+}
+
+
+.background .grid .grid-box-collumn {
+	flex-direction: column;
+}
+
+.background .grid .grid-row {
+	color: #000000;	
+	flex-grow: 10;
+	font-size: 0.6m; 
+	text-align: left;
+	margin: 4px 4px;
+	border-bottom: 1px solid #979797;
+}
+
+.noBorder {
+	border: none!important;
+}
+
+
+
+
+.w250px {
+	width: 200px!important;
+}
+
+.w50p {
+	width: 50%;
+	background: #000000;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+.mb50 {
+	margin-bottom: 50px!important;
+}
+
+.mt50 {
+	margin-top: 50px;
+}
+
+.mb05em {
+	margin-bottom: 0.5em!important;
+}
+
+.mb1em {
+	margin-bottom: 1em!important;
+}
+
+.mb15em {
+	margin-bottom: 1.5em!important;
+}
+
+.wd60perc {
+	width: 60%!important;
+}
+
+.border-bootom {
+	border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+
+.color1 {
+	color: rgb(130, 0, 0)!important;
+}
+
+
+
+
+/* reorganizacao */
+
+.titleDefaultTop {
+	font-family: "Montserrat", serif;
+	width: 100%;
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: #fdfdfd;
+	line-height: 1.3em;	
+}
+
+.subTitleTop {
+	color: #fff;
+	font-size: 0.8em;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 22px;
+	margin-bottom: 50px;
+}
+
+.forgotMyPasswordLabel {
+	font-size: 0.8em;
+}
+
+.registerLabel {
+	font-size: 0.8em;
+}
+ 
+
+.messageError {
+	color: rgb(255, 255, 128);
+	font-size: 0.5em;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+
+.messageError2 {
+	color:#B0383A;
+	font-size: 0.5em;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+}
+
+.background .homeButton {
+	flex-direction: row;
+	justify-content: space-around;	
+}
+
+.background .homeButton button {
+	width: 32.5%!important;	
+	font-size: 28px;
+	border-radius: 10px;
+}
+
+
+
+/* forms */
+
+select {	
+	width: 100%;
+	border: none;
+	outline: none;
+	border: 0.15em solid #ffffff;
+	border-bottom: 0.15em solid #ff474a;
+	font-size: 20px;
+	font-weight: 200!important;
+	padding: 10px 9px;
+	color: #000;
+}
+
+select:focus {
+	border: 0.15em solid rgb(171, 217, 255);
+}
+
+input {
+	font-family: "Montserrat", serif;
+	font-size: 1.2em;
+	font-weight: 200;
+	color: #000;
+	padding: 20px 20px;
+	outline: none;
+	border: 3px solid #fff;	
+	border: 0.1em solid #ffffff;
+	border-bottom: 0.1em solid #ff474a;
+}
+
+input::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	font-family: "Montserrat", serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
+	letter-spacing: 2px;
+}
+
+input::-moz-placeholder {
+	/* Firefox 19+ */
+	font-family: "Montserrat", serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
+	letter-spacing: 2px;
+}
+
+input:-ms-input-placeholder {
+	/* IE 10+ */
+	font-family: "Montserrat", serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
+	letter-spacing: 2px;
+}
+
+input:-moz-placeholder {
+	/* Firefox 18- */
+	font-family: "Montserrat", serif;
+	font-size: 16px;
+	font-weight: 200;
+	color: rgb(108, 108, 108);
+	letter-spacing: 2px;
+}
+
+
+input:focus {
+	border: 3px solid rgb(171, 217, 255);
+}
+
+a {
+	font-family: "Montserrat", serif;
+	font-size: 0.3em;
+	color: #fff;
+	font-weight: 200;
+	text-decoration: none;
+}
+
+button {
+	font-family: "Montserrat", serif;
+	font-size: 1.5em;
+	letter-spacing: 1px;
+	padding: 25px 12px;
+	border: none;
+	cursor: pointer;
+}
+
+button[class="info"] {
+	background-color: #ff474a;
+	color: #fff;
+}
+
+button[class="info"]:hover {
+	background-color: #c53f44;
+}
+
+button[class="info"]:active {
+	background-color: #942d31;
+}
+
+button[class="save"] {
+	background-color: #ff474a;
+	color: #fff;
+}
+
+button[class="save"]:hover {
+	background-color: #c53f44;
+}
+
+button[class="save"]:active {
+	background-color: #942d31;
+}
+
+button[class="cancel"] {
+	background-color: #B0383A;
+	color: #fff;
+}
+
+button[class="cancel"]:hover {
+	background-color: #7D2829;
+}
+
+button[class="cancel"]:active {
+	background-color: #571C1D;
+} 
+
+/* colors */
+
+.colorBlack {
+	color: #000000!important;
+} 
+
+.textLeft {
+	flex-direction: row;
+	justify-content: flex-start;
+	text-align: left;
+	padding: 3px 3px;
+	border-right: 1px solid #979797;
+}
+
+.textRight {
+	flex-direction: row;
+	justify-content: flex-end;
+	text-align: right;
+	padding: 3px 3px;
+	border-right: 1px solid #979797;
+	padding-right: 10px;
+}
+
+.w25p {
+	width: 25%;
+}
+
+.w100perc {
+	width: 100%;
+}

@@ -1,0 +1,120 @@
+@media screen and (max-width: 650px) {
+	.accessTec {
+		background: rgb(255, 128, 64);
+	}
+	
+	.accessTecDesktop {
+		display: none;
+	}
+	
+	.accessTecTablet {
+		display: none;
+	}
+	
+	.accessTecMobile {
+		display: flex;
+	}
+	
+	.titleDefaultTop {
+		font-size: 0.9em;	
+	}
+	
+	.subTitleTop {
+		font-size: 0.5em;	
+		line-height: 1.5em;
+	}	
+	
+	.background .featureSummary .title .primary {
+		font-size: 0.4em;	
+		margin: 25px 0 0px 0;
+	}
+	
+	
+	.background .featureSummary .title .secondary {
+		font-size: 0.4em;
+		margin: 10px 0 10px 0;
+	}
+	
+	
+	.messageError {
+		color: rgb(255, 255, 128);
+		font-size: 0.3em!important;
+		font-weight: 500;
+		letter-spacing: 2px;
+	}
+	
+	.forgotMyPasswordLabel {
+		font-size: 0.4em;
+	}
+	
+	.registerLabel {
+		font-size: 0.4em;
+	}
+	
+	.background .featureSummary .title .secondary {		
+		font-size: 0.35em;
+		margin: 10px 0 10px 0;
+		font-weight: 700;		
+	}
+
+	.background .grid-row {
+		flex-direction: column;	
+		margin: 2px 4px!important;
+	}
+	
+	.background .grid .grid-col-title {		
+		display: none!important;
+		font-size: 0.35em;
+		letter-spacing: 1px;
+		font-weight: 400;
+		flex-grow: unset!important;
+		border-right: none;
+	}
+	
+	.background .grid .grid-col-title2 {
+		display: flex!important;
+		justify-content: flex-start!important;
+		color: #000000!important;
+		font-size: 0.35em;
+		letter-spacing: 1px;
+		font-weight: 400;
+		margin: 0 0!important;	
+		width: 40%!important;
+		flex-grow: unset!important;
+		border-right: none!important;
+		color: #ffffff!important;
+		padding: 3px 3px!important;
+	}
+	
+	.background .grid .grid-col {
+		width: 60%!important;
+		flex-grow: initial!important;
+		margin: 0 0!important;			
+		border-right: none;
+		justify-content: flex-start!important;
+		margin: 0 10px!important;	
+		padding: 0!important;		
+	}
+	
+	.background .featureSummary .title .secondary {
+		border: none!important;	
+	}
+	/* forms */
+	.background .homeButton button {
+		font-size: 0.3em;
+	}
+	
+	button {
+		padding: 15px 12px;
+	}
+	
+	button[class="info"] {
+		font-size: 0.5em;
+	}
+	
+	input {
+		font-size: 0.5em;
+		line-height: 1em;
+	}
+		
+}

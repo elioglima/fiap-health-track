@@ -22,7 +22,7 @@ public class measurememtsEditController extends RouterController {
 		try {					
 			if (!this.Connect()) return;
 			UserBloodPressure userBloodPressure = new UserBloodPressure(this.Connection, this.user.getId());
-			userBloodPressure.findAll();			
+			userBloodPressure.findAll(100);			
 			this.setSession("userBloodPressure", userBloodPressure.row);
 			this.dispathFileMeasurememtsEdit();		
 		} finally {
@@ -39,7 +39,7 @@ public class measurememtsEditController extends RouterController {
 			if (!this.Connect()) return;			
 			
 			UserBloodPressure userBloodPressure = new UserBloodPressure(this.Connection, this.user.getId());
-			userBloodPressure.findAll();
+			userBloodPressure.findAll(1);
 			
 			userBloodPressure.append();
 			userBloodPressure.row.setUserId(this.user.getId());
@@ -52,7 +52,7 @@ public class measurememtsEditController extends RouterController {
 				return;
 			}
 			
-			this.dispathFileMeasurememts();
+			this.redirMeasurememts();
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {

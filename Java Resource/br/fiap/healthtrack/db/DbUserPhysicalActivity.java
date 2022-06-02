@@ -91,8 +91,13 @@ public class DbUserPhysicalActivity extends InstanceManager implements IControll
 		return this.loadData();	
 	}
 	
-	public boolean findAll() {
+	public boolean findAll(int rowNum) {
+		
 		String sql = this.select.concat("where user_id = ").concat(String.valueOf(this.row.getUserId()));
+		sql = sql.concat(" and rownum <= ").concat(String.valueOf(rowNum));
+		sql = sql.concat(" order by id desc");
+		System.out.println(sql);
+		
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 

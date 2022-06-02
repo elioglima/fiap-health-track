@@ -22,8 +22,10 @@ public class DbTypePhyActivity extends InstanceManager implements IController {
 		this.setConnectionManager(connectionManager);
 	}
 	
-	public boolean findAll() {
+	public boolean findAll(int rowNum) {
 		String sql = this.select;
+		sql = sql.concat(" where rownum <= ").concat(String.valueOf(rowNum));
+		sql = sql.concat(" order by id desc");
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 
@@ -35,7 +37,7 @@ public class DbTypePhyActivity extends InstanceManager implements IController {
 	
 	public boolean findId(int id) {
 		String sql = this.select.concat("where id = ").concat(Integer.toString(id));
-		System.out.println(sql);
+		sql = sql.concat(" and rownum <= ").concat(String.valueOf(1));
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 

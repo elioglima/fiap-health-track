@@ -1,12 +1,9 @@
 package br.fiap.healthtrack.servlets;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
 import br.fiap.healthtrack.TypeFoodConsumed;
 import br.fiap.healthtrack.UserFoodConsumed;
 import br.fiap.healthtrack.model.TypeFoodConsumedModel;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -28,7 +25,7 @@ public class foodController extends RouterController {
 			if (!this.Connect()) return;			
 			UserFoodConsumed userFoodConsumed = new UserFoodConsumed(this.Connection, this.user.getId());
 			TypeFoodConsumed typeFoodConsumed = new TypeFoodConsumed(this.Connection);
-			userFoodConsumed.findAll();
+			userFoodConsumed.findAll(20);
 			this.setSession("userFoodConsumed", userFoodConsumed.row);
 			
 			ArrayList<TypeFoodConsumedModel> listTypeFoodConsumed = new ArrayList<TypeFoodConsumedModel>();
@@ -50,16 +47,5 @@ public class foodController extends RouterController {
 		} finally {
 			this.Close();
 		}
-	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.loadHttp(request, response);
-		if (!this.doVerify()) return;
-		
-//		HttpSession dataSesion = request.getSession();		
-		
-//		RequestDispatcher rd = request.getRequestDispatcher(request.getContextPath().concat("/profile/edit.jsp"));        
-//		rd.forward(request, response);
-		response.sendRedirect(request.getContextPath().concat("/home"));
 	}
 }

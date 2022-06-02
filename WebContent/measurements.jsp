@@ -26,19 +26,31 @@
         	</div>
         	
         	<div class="grid">
-	          	<div class="grid-title">
-	   	        	<div class="grid-col w25p">Data</div>    	        
-	   	        	<div class="grid-col w25p">Min</div>
-	   	        	<div class="grid-col w25p">Max</div>
-	   	        	<div class="grid-col w25p">Batimentos</div>
+	          	<div class="grid-title bgr1">
+	   	        	<div class="grid-col-title w25p textLeft">Data</div>    	        
+	   	        	<div class="grid-col-title w25p textRight">Min</div>
+	   	        	<div class="grid-col-title w25p textRight">Max</div>
+	   	        	<div class="grid-col-title w25p textRight">Batimentos</div>
 	       		</div>
 	       		<div class="grid-box-collumn">
 	       			<% for(UserBloodPressureModel value : listUserBloodPressure) { %>
 		       			<div class="grid-row">
-			   	        	<div class="grid-col w25p"><% out.print(value.getAtUpdate()); %></div>    	        
-			   	        	<div class="grid-col w25p"><% out.print(value.getValueBeats()); %></div>
-			   	        	<div class="grid-col w25p"><% out.print(value.getValueMin()); %></div>
-			   	        	<div class="grid-col w25p"><% out.print(value.getValueMax()); %></div>
+		       				<div class="w100perc">
+		       					<div class="grid-col-title2 textLeft">Data</div>
+				   	        	<div class="grid-col w25p textLeft"><% out.print(value.getAtUpdate()); %></div>    	        
+		       				</div>
+		       				<div class="w100perc">
+		       					<div class="grid-col-title2 textRight">Mínima</div>				   	        	    	        
+			   	        		<div class="grid-col w25p textRight"><% out.print(value.getValueMin()); %></div>
+			   	        	</div>
+			   	        	<div class="w100perc">
+			   	        		<div class="grid-col-title2 textRight">Máxima</div>
+			   	        		<div class="grid-col w25p textRight"><% out.print(value.getValueMax()); %></div>
+			   	        	</div>
+			   	        	<div class="w100perc">
+			   	        		<div class="grid-col-title2 textRight">Batimentos</div>
+				   	        	<div class="grid-col w25p textRight"><% out.print(value.getValueBeats()); %></div>
+			   	        	</div>
 			       		</div>
 					<%}%>
 		       	</div>

@@ -21,8 +21,11 @@ public class DbLanguages extends InstanceManager implements IController {
 		this.row = new LanguagesModel();
 	}
 	
-	public boolean findAll() {
-		String sql = this.select;		
+	public boolean findAll(int rowNum) {
+		String sql = this.select;
+		sql = sql.concat(" where rownum <= ").concat(String.valueOf(rowNum));
+		sql = sql.concat(" order by id desc");
+		
 		this.clearSQL();
 		this.addSQL(sql);		
 		if (!this.executeSelect()) 
@@ -69,7 +72,7 @@ public class DbLanguages extends InstanceManager implements IController {
 		return this.loadData();	
 	}
 	
-	public boolean save() {
+	public boolean post() {
 		PreparedStatement pstmt;
 		try {			
 			String sql = null;

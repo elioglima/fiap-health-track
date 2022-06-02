@@ -7,5 +7,5 @@ public interface IController {
 	public boolean post();
 	public boolean next();
 	public boolean first();
-	public boolean findAll();
+	public boolean findAll(int rowNum);
 }

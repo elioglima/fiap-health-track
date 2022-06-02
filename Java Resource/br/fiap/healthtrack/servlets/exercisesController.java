@@ -28,7 +28,7 @@ public class exercisesController extends RouterController {
 			if (!this.Connect()) return;			
 			UserPhysicalActivity userPhysicalActivity = new UserPhysicalActivity(this.Connection, this.user.getId());
 			TypePhyActivity typePhyActivity = new TypePhyActivity(this.Connection);
-			userPhysicalActivity.findAll();
+			userPhysicalActivity.findAll(20);
 			this.setSession("userPhysicalActivity", userPhysicalActivity.row);
 			
 			ArrayList<TypePhyactivityModel> listTypePhyActivity = new ArrayList<TypePhyactivityModel>();

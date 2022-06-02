@@ -16,9 +16,9 @@
 %>
 <body>    
     <div class="background">
-        <div class="homeTitle">
-            <span id="logo">Health Track</span>            
-        </div>        
+        <div class="titleDefaultTop">
+            <span class="colorBlack">Health Track</span>            
+        </div>         
         
         <div class="homeText noBorder ">
 	        <div class="homeTextTitle">
@@ -26,19 +26,31 @@
         	</div>
         	
         	<div class="grid">
-	          	<div class="grid-title">
-	   	        	<div class="grid-col w25p">Data</div>    	        
-	   	        	<div class="grid-col w25p">Tipo</div>
-	   	        	<div class="grid-col w25p">Qtde</div>
-	   	        	<div class="grid-col w25p">Calorias</div>
+	          	<div class="grid-title bgr1">
+	   	        	<div class="grid-col-title w25p textLeft">Data</div>    	        
+	   	        	<div class="grid-col-title w25p textLeft">Tipo</div>
+	   	        	<div class="grid-col-title w25p textRight">Qtde</div>
+	   	        	<div class="grid-col-title w25p textRight">Calorias</div>
 	       		</div>
 	       		<div class="grid-box-collumn">
 	       			<% for(TypeFoodConsumedModel value : listTypeFoodConsumed) { %>
 		       			<div class="grid-row">
-			   	        	<div class="grid-col w25p"><% out.print(value.getAtUpdate()); %></div>    	        
-			   	        	<div class="grid-col w25p"><% out.print(value.getDescription()); %></div>
-			   	        	<div class="grid-col w25p"><% out.print(value.getQtde()); %></div>
-			   	        	<div class="grid-col w25p"><% out.print(value.getValueCalorie()); %></div>
+		       				<div class="w100perc">
+		       					<div class="grid-col-title2 textLeft">Data</div>
+			   	        		<div class="grid-col w25p textLeft"><% out.print(value.getAtUpdate()); %></div>
+			   	        	</div>    	        
+			   	        	<div class="w100perc">
+			   	        		<div class="grid-col-title2 textRight">Tipo</div>
+			   	        		<div class="grid-col w25p textRight"><% out.print(value.getDescription()); %></div>
+			   	        	</div>    	        
+			   	        	<div class="w100perc">
+			   	        		<div class="grid-col-title2 textRight">Minutos</div>
+			   	        		<div class="grid-col w25p textRight"><% out.print(value.getQtde()); %></div>
+			   	        	</div>    	        
+			   	        	<div class="w100perc">
+			   	        		<div class="grid-col-title2 textRight">Calorias</div>
+			   	        		<div class="grid-col w25p textRight"><% out.print(value.getValueCalorie()); %></div>
+			   	        	</div>
 			       		</div>
 					<%}%>
 		       	</div>

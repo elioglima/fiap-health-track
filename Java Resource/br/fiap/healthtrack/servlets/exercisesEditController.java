@@ -26,20 +26,22 @@ public class exercisesEditController extends RouterController {
 			if (!this.Connect()) return;			
 			UserPhysicalActivity userPhysicalActivity = new UserPhysicalActivity(this.Connection, this.user.getId());
 			TypePhyActivity typePhyActivity = new TypePhyActivity(this.Connection);
-			userPhysicalActivity.findAll();
+			userPhysicalActivity.findAll(100);
 			this.setSession("userPhysicalActivity", userPhysicalActivity.row);
 			
-			typePhyActivity.findAll();
+			typePhyActivity.findAll(100);
 			ArrayList<TypePhyactivityModel> listTypePhyActivity = new ArrayList<TypePhyactivityModel>();
 			
-			do {			
-
-				TypePhyactivityModel t = new TypePhyactivityModel();
-				t.setResult(typePhyActivity.getResultQuery());
-				listTypePhyActivity.add(t);
-				
-				System.out.println(typePhyActivity.row.getDescription());
-			} while (typePhyActivity.next());
+			if (typePhyActivity.getRecordCount() > 0) {				
+				do {			
+	
+					TypePhyactivityModel t = new TypePhyactivityModel();
+					t.setResult(typePhyActivity.getResultQuery());
+					listTypePhyActivity.add(t);
+					
+					System.out.println(typePhyActivity.row.getDescription());
+				} while (typePhyActivity.next());
+			}
 			
 			
 			System.out.println(listTypePhyActivity);
@@ -58,7 +60,7 @@ public class exercisesEditController extends RouterController {
 			if (!this.Connect()) return;			
 			
 			UserPhysicalActivity userPhysicalActivity = new UserPhysicalActivity(this.Connection, this.user.getId());
-			userPhysicalActivity.findAll();
+			userPhysicalActivity.findAll(100);
 			
 			int typePhyActivityId = this.getParamInt("typePhyActivityId");			
 			TypePhyActivity typePhyActivity = new TypePhyActivity(this.Connection);
@@ -83,7 +85,7 @@ public class exercisesEditController extends RouterController {
 				return;
 			}
 			
-			this.redirFileExercises();
+			this.redirExercises();
 		} catch(Exception e) {
 			e.printStackTrace();
 				

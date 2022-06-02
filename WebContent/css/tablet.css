@@ -1,0 +1,101 @@
+@media screen and (max-width: 950px) {
+	.accessTec {
+		background: rgb(0, 128, 255);
+	}
+	
+	.accessTecDesktop {
+		display: none;
+	}
+	
+	.accessTecTablet {
+		display: flex;
+	}
+	
+	.accessTecMobile {
+		display: none;
+	}
+	
+	.titleDefaultTop {
+		font-size: 1em;	
+	}
+	
+	.subTitleTop {
+		font-size: 0.8em;	
+		line-height: 1em;
+	}	
+	
+	.forgotMyPasswordLabel {
+		font-size: 0.6em;
+	}
+	
+	.registerLabel {
+		font-size: 0.6em;
+	}
+	
+	.background .homeText .homeTextTitle  .name {
+		font-size: 0.6em;	
+	}
+	
+	.background .homeText .homeTextTitle  .button {
+		font-size: 0.4em;	
+	}
+	
+	.background .homeText .homeTextName .label {
+		font-size: 0.8em;		
+	}
+
+	.background .homeText .homeTextName .value {
+		font-size: 0.8em;	
+	}
+	
+	.background .featureSummary .title .primary {
+		font-size: 0.5em;	
+		margin: 25px 0 0px 0;
+	}
+	
+	
+	.background .featureSummary .title .secondary {
+		font-size: 0.35em;
+		margin: 10px 0 10px 0;
+		font-weight: 700;
+	}
+
+
+	
+	.background .grid .grid-col-title {
+		font-size: 0.35em;
+		letter-spacing: 1px;
+		font-weight: 400;	
+	}
+	
+	.background .grid .grid-col-title2 {		
+		display: none;			
+	}
+	
+	.background .grid .grid-col {
+		font-size: 0.3em;
+		letter-spacing: 2px;
+	}	
+	
+	
+	
+
+	/* forms */ 	
+	.background .homeButton button {
+		font-size: 0.3em;
+	}
+	
+	button {
+		padding: 15px 12px;
+	}
+	
+	button[class="info"] {
+		font-size: 0.8em;
+	}
+	
+	input {
+		font-size: 0.7em;
+	}
+	
+		
+}

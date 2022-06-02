@@ -27,7 +27,7 @@ public class measurememtsController extends RouterController {
 			
 			// BATIMENTO CARDIACO
 			UserBloodPressure userBloodPressure = new UserBloodPressure(this.Connection, this.user.getId());
-			userBloodPressure.findAll();
+			userBloodPressure.findAll(20);
 			
 			ArrayList<UserBloodPressureModel> listUserBloodPressure = new ArrayList<UserBloodPressureModel>();			
 			if (userBloodPressure.getRecordCount() > 0) {				
@@ -42,6 +42,7 @@ public class measurememtsController extends RouterController {
 				} while (userBloodPressure.next());
 			}			
 			
+			System.out.println(listUserBloodPressure);
 			this.setSession("listUserBloodPressure", listUserBloodPressure);			
 			this.dispathFileMeasurememts();		
 		} finally {

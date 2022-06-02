@@ -21,10 +21,11 @@
 	@SuppressWarnings("unchecked")
 	ArrayList<UserBloodPressureModel> listUserBloodPressure = (ArrayList<UserBloodPressureModel>) request.getSession().getAttribute("listUserBloodPressure");
 %>
-<body>    
+<body>
+	<div class="accessTec"></div> 	   
     <div class="background">
-        <div class="homeTitle">
-            <span id="logo">Health Track</span>            
+        <div class="titleDefaultTop">
+            <span class="colorBlack">Health Track</span>            
         </div>
         <div class='homePhoto'>
             <img src="assets/homePhoto.png" >
@@ -39,8 +40,8 @@
             	<div class="value"><% out.println(user.getMail()); %></div>
 			</div>
 			<div class="homeTextName">
-            	<div class="label">Telefone:</div>
-            	<div class="value"><% out.println(user.getPhoneMobile()); %></div>
+            	<div class="label">Telefone:</div>            	
+            	<div class="value"><% if (user.getPhoneMobile() != null) { out.println(user.getPhoneMobile()); } %></div>
 			</div>    
 			<div class="homeTextName">
             	<a class="button" href="logout" >Sair</a>            	
@@ -61,18 +62,30 @@
             	<div class="secondary border-bootom">Medições</div>
             	<div class="grid">
 		          	<div class="grid-title bgr1">
-		   	        	<div class="grid-col w25p">Data</div>    	        
-		   	        	<div class="grid-col w25p">Mínima</div>
-		   	        	<div class="grid-col w25p">Máxima</div>
-		   	        	<div class="grid-col w25p">Batimentos</div>
+		   	        	<div class="grid-col-title w25p textLeft">Data</div>    	        
+		   	        	<div class="grid-col-title w25p textRight">Mínima</div>
+		   	        	<div class="grid-col-title w25p textRight">Máxima</div>
+		   	        	<div class="grid-col-title w25p textRight">Batimentos</div>
 		       		</div>
 		       		<div class="grid-box-collumn">
 		       			<% for(UserBloodPressureModel value : listUserBloodPressure) { %>
 			       			<div class="grid-row">
-				   	        	<div class="grid-col w25p"><% out.print(value.getAtUpdate()); %></div>    	        
-				   	        	<div class="grid-col w25p"><% out.print(value.getValueMin()); %></div>
-				   	        	<div class="grid-col w25p"><% out.print(value.getValueMax()); %></div>
-				   	        	<div class="grid-col w25p"><% out.print(value.getValueBeats()); %></div>
+			       				<div class="w100perc">
+			       					<div class="grid-col-title2 textLeft">Data</div>
+					   	        	<div class="grid-col w25p textLeft"><% out.print(value.getAtUpdate()); %></div>    	        
+			       				</div>
+			       				<div class="w100perc">
+			       					<div class="grid-col-title2 textRight">Mínima</div>				   	        	    	        
+				   	        		<div class="grid-col w25p textRight"><% out.print(value.getValueMin()); %></div>
+				   	        	</div>
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textRight">Máxima</div>
+				   	        		<div class="grid-col w25p textRight"><% out.print(value.getValueMax()); %></div>
+				   	        	</div>
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textRight">Batimentos</div>
+					   	        	<div class="grid-col w25p textRight"><% out.print(value.getValueBeats()); %></div>
+				   	        	</div>
 				       		</div>
 						<%}%>
 			       	</div>
@@ -83,18 +96,30 @@
             	<div class="secondary border-bootom">Alimentação</div>
             	<div class="grid">
 		          	<div class="grid-title bgr1">
-		   	        	<div class="grid-col w25p">Data</div>    	        
-		   	        	<div class="grid-col w25p">Tipo</div>
-		   	        	<div class="grid-col w25p">Minutos</div>
-		   	        	<div class="grid-col w25p">Calorias</div>
+		   	        	<div class="grid-col-title w25p textLeft">Data</div>    	        
+		   	        	<div class="grid-col-title w25p textRight">Tipo</div>
+		   	        	<div class="grid-col-title w25p textRight">Minutos</div>
+		   	        	<div class="grid-col-title w25p textRight">Calorias</div>
 		       		</div>
 		       		<div class="grid-box-collumn">
 		       			<% for(TypeFoodConsumedModel value : listTypeFoodConsumed) { %>
 			       			<div class="grid-row">
-				   	        	<div class="grid-col w25p"><% out.print(value.getAtUpdate()); %></div>    	        
-				   	        	<div class="grid-col w25p"><% out.print(value.getDescription()); %></div>
-				   	        	<div class="grid-col w25p"><% out.print(value.getQtde()); %></div>
-				   	        	<div class="grid-col w25p"><% out.print(value.getValueCalorie()); %></div>
+			       				<div class="w100perc">
+			       					<div class="grid-col-title2 textLeft">Data</div>
+				   	        		<div class="grid-col w25p textLeft"><% out.print(value.getAtUpdate()); %></div>
+				   	        	</div>    	        
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textRight">Tipo</div>
+				   	        		<div class="grid-col w25p textRight"><% out.print(value.getDescription()); %></div>
+				   	        	</div>    	        
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textRight">Minutos</div>
+				   	        		<div class="grid-col w25p textRight"><% out.print(value.getQtde()); %></div>
+				   	        	</div>    	        
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textRight">Calorias</div>
+				   	        		<div class="grid-col w25p textRight"><% out.print(value.getValueCalorie()); %></div>
+				   	        	</div>
 				       		</div>
 						<%}%>
 			       	</div>
@@ -105,18 +130,30 @@
     	        <div class="secondary border-bootom">Exercícios</div>
     	        <div class="grid">
 		          	<div class="grid-title bgr1">
-		   	        	<div class="grid-col w25p">Data</div>    	        
-		   	        	<div class="grid-col w25p">Tipo</div>
-		   	        	<div class="grid-col w25p">Minutos</div>
-		   	        	<div class="grid-col w25p">Calorias</div>
+		   	        	<div class="grid-col-title w25p textLeft">Data</div>    	        
+		   	        	<div class="grid-col-title w25p textLeft">Tipo</div>
+		   	        	<div class="grid-col-title w25p textRight">Minutos</div>
+		   	        	<div class="grid-col-title w25p textRight">Calorias</div>
 		       		</div>
 		       		<div class="grid-box-collumn">
 		       			<% for(TypePhyactivityModel value : listTypePhyActivity) { %>
 			       			<div class="grid-row">
-				   	        	<div class="grid-col w25p"><% out.print(value.getAtUpdate()); %></div>    	        
-				   	        	<div class="grid-col w25p"><% out.print(value.getDescription()); %></div>
-				   	        	<div class="grid-col w25p"><% out.print(value.getTimeActivityMinute()); %></div>
-				   	        	<div class="grid-col w25p"><% out.print(value.getValueCalorie()); %></div>
+			       				<div class="w100perc">
+			       					<div class="grid-col-title2 w25p textLeft">Data</div>
+					   	        	<div class="grid-col w25p textLeft"><% out.print(value.getAtUpdate()); %></div>    	        
+			       				</div>    	        
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textLeft">Tipo</div>
+				   	        		<div class="grid-col w25p textLeft"><% out.print(value.getDescription()); %></div>
+				   	        	</div>    	        
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textRight">Minutos</div>
+				   	        		<div class="grid-col w25p textRight"><% out.print(value.getTimeActivityMinute()); %></div>
+				   	        	</div>    	        
+				   	        	<div class="w100perc">
+				   	        		<div class="grid-col-title2 textRight">Calorias</div>
+				   	        		<div class="grid-col w25p textRight"><% out.print(value.getValueCalorie()); %></div>
+				   	        	</div>    	        
 				       		</div>
 						<%}%>
 			       	</div>
@@ -127,9 +164,13 @@
         </div>
 
         
-
+	
     </div>
+    <div class="accessTec">
+		<div class="accessTecDesktop">desktop</div>
+		<div class="accessTecTablet">tablet</div>
+		<div class="accessTecMobile">mobile</div>		
+	</div> 
     <script src="tools/site.js"></script>
 </body>
-
 </html>

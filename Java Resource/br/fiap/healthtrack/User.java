@@ -15,6 +15,7 @@ public class User extends DbUser {
 	private boolean isLogged;	
 	public UserAddress address;
 	public UserAlerts alerts;
+	private String messageError;
 	
 	public User(ConnectionManager connectionManager) {
 		super(connectionManager);
@@ -23,17 +24,16 @@ public class User extends DbUser {
 	
 	private boolean load() {
 		if (this.isLogged == false) return false;
-//		this.address = new UserAddress(this.row.getId());		
-//		this.alerts = new UserAlerts(this.row.getId());
 		return true;
 	}	
 		
 	public boolean logIn(String mail, String password) {
 		System.out.println("user.logIn.");
+		setMessageError(null);
 		
 		if (!this.FindMail(mail)) {
 			this.isLogged = false;
-			System.err.println("Usuario nao localizado.");
+			setMessageError("Usuário não localizado ou Senha errada!!");			
 			return false;
 		}
 		
@@ -42,11 +42,9 @@ public class User extends DbUser {
 		
 		try {
 			String passwordEncoded = Base64.getUrlEncoder().encodeToString(password.getBytes());
-			System.err.println("CHECKED");
-			System.err.println(this.row.getPassword());
-			System.err.println(passwordEncoded);			
 			return passwordEncoded.equals(this.row.getPassword());
 		} catch (Exception e) {
+			setMessageError("Falha ao localizar usuario.");
 			return false;
 		}		
 	}	
@@ -90,6 +88,14 @@ public class User extends DbUser {
 	public void saveAddress() {
 		this.address.save();		
 		
+	}
+
+	public String getMessageError() {
+		return messageError;
+	}
+
+	public void setMessageError(String messageError) {
+		this.messageError = messageError;
 	}
 
 	

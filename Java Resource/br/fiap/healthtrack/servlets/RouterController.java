@@ -58,10 +58,7 @@ public class RouterController extends ViewController implements IRouterControler
 		dataSesion.setAttribute(name, value);
 		;
 	}
-	
-	
-
-	
+		
 	public boolean doVerify() {
 		if (!SessionUtils.checked(this.request, this.response))
 			return false;
@@ -81,6 +78,11 @@ public class RouterController extends ViewController implements IRouterControler
 	protected void setError(String messageError) {
 		this.setSession("messageError", messageError);
 		this.setMessageError(messageError);
+	}
+	
+	protected boolean isNull(String parameter) {
+		System.out.println(parameter.trim() == null);
+		return parameter == null ? true : parameter.length() > 0 ? parameter.trim().equals("null") ? true : false : true;
 	}
 
 	protected String getMessageError() {
