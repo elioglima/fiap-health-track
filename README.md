@@ -18,6 +18,10 @@ ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 
 ![image](https://user-images.githubusercontent.com/6618004/171542241-0c950770-b7d0-44b2-8239-5ef7ed3fd307.png)
 
+# Modelagem de dados
+![image](https://user-images.githubusercontent.com/6618004/171543892-ca8d086c-db83-4e77-a3de-ce74ce188f62.png)
+
+
 # Tabelas
 
 ![image](https://user-images.githubusercontent.com/6618004/171543224-7e58c562-e99d-4208-9943-0b2dee08eb5e.png)
@@ -37,8 +41,3 @@ ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 ![image](https://user-images.githubusercontent.com/6618004/171543461-5fdc3ce1-8592-42c6-a27e-00f76bdfe8ff.png)
 
 ![image](https://user-images.githubusercontent.com/6618004/171543487-d8929ca1-e45d-42c5-aacc-022ef47a3aef.png)
-
-# Modelagem de dados
-![image](https://user-images.githubusercontent.com/6618004/171543892-ca8d086c-db83-4e77-a3de-ce74ce188f62.png)
-
-
