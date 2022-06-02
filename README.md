@@ -1,7 +1,5 @@
 # fiap-health-track
 
-[this teste](https://github.com/elioglima/fiap-health-track/blob/main/database.sql)
-
 ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 
 ![image](https://user-images.githubusercontent.com/6618004/171544881-2acb9bb3-2daa-4c15-91d8-0a704ec8a45f.png)
@@ -24,7 +22,7 @@ ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 ![image](https://user-images.githubusercontent.com/6618004/171543892-ca8d086c-db83-4e77-a3de-ce74ce188f62.png)
 
 - Script do banco de dados
-
+[a relative link](https://github.com/elioglima/fiap-health-track/blob/main/database.sql)
 
 # Tabelas
 
