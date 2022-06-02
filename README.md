@@ -2,7 +2,7 @@
 
 ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 
-![image](https://user-images.githubusercontent.com/6618004/171544684-f1261d54-f7c1-461a-b6b0-f08de7253701.png)
+![image](https://user-images.githubusercontent.com/6618004/171544810-a1defba1-94fa-4311-97e4-88fbe61b7128.png)
 
 ![image](https://user-images.githubusercontent.com/6618004/171544729-69127f18-389e-4bb2-baa7-e9c3b086bc46.png)
 
