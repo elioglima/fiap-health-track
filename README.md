@@ -21,6 +21,8 @@ ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
 # Modelagem de dados
 ![image](https://user-images.githubusercontent.com/6618004/171543892-ca8d086c-db83-4e77-a3de-ce74ce188f62.png)
 
+- Script do banco de dados
+[a link]([https://github.com/user/repo/blob/branch/other_file.md](https://github.com/elioglima/fiap-health-track/blob/main/database.sql))
 
 # Tabelas
 
