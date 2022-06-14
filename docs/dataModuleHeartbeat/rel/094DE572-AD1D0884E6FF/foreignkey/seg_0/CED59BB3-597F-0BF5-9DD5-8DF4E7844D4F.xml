@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CED59BB3-597F-0BF5-9DD5-8DF4E7844D4F" containerWithKeyObject="C56E0A3A-EA6E-97F6-5111-B8F1809AD3CE" localFKIndex="21648192-82A7-7CA1-7BED-06A83B70C344" name="user_profile_languages_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:54:10 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<referredTableLongName>languages</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7D6C48CD-7609-AF23-BDFF-73278BEE3093</referredTableID>
+<keyObject>176925F7-B20A-D375-6ED2-8B26BCA1CA34</keyObject>
+<referredKeyID>176925F7-B20A-D375-6ED2-8B26BCA1CA34</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

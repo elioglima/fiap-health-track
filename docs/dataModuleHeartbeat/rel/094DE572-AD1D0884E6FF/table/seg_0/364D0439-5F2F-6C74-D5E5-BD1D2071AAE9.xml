@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="364D0439-5F2F-6C74-D5E5-BD1D2071AAE9" name="type_phyactivity">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:53:20 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E2E8042C-68EE-064E-29CF-267D9BD7A43A">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:54:19 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_type_phyactivity_id</notNullConstraintName>
+</Column>
+<Column name="description" id="6A45C7CC-FCF5-9AC7-36D7-3937487AB0E5">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:54:19 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_type_phyactivity_description</notNullConstraintName>
+</Column>
+<Column name="value_calorie" id="552F765B-AF4E-8A57-0DB1-5152CC2825EF">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:09:51 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,18,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9320E7B5-F2DE-795F-230E-42EB99166287" name="type_phyactivity_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:54:19 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2E8042C-68EE-064E-29CF-267D9BD7A43A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

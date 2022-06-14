@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="35C5E0B4-2433-4822-1C53-79FD3852F33A" containerWithKeyObject="FAF9663D-B63F-E9A5-1AAC-F84584F77115" localFKIndex="744DDA43-049B-D18D-FBEE-FCAABAFD7D97" name="user_blood_pressure_user_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:43:44 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<referredTableLongName>user</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2C66AB26-4547-93EE-DFF3-08195006C016</referredTableID>
+<keyObject>5DBB8AAD-E287-EA6D-5753-A9C4413CCBBB</keyObject>
+<referredKeyID>5DBB8AAD-E287-EA6D-5753-A9C4413CCBBB</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

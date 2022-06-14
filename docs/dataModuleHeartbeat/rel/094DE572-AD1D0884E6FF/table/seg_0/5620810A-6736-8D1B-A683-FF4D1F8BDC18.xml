@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5620810A-6736-8D1B-A683-FF4D1F8BDC18" name="type_foodconsumed">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:05:02 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C2C0A0C0-7FC2-A86E-C051-297C869A56A8">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:06:18 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_type_food_consumed_id</notNullConstraintName>
+</Column>
+<Column name="description" id="6A52FFC0-9D54-D50D-1462-E63E57CFB375">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:06:18 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_type_food_consumed_description</notNullConstraintName>
+</Column>
+<Column name="value_calorie" id="CC4EFF5D-7FE9-920B-A904-9DD8ACE1F709">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:06:18 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,18,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_food_consumed_id" id="3160852B-360E-ABED-6AD7-D45AAD796A32">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:08:29 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_type_food_consumed_user_food_consumed_id</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="628AD832-5E33-F1E2-E18C-306B22288636" referredColumn="5550ABD9-1F19-5106-97A8-4552AC753B41"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E5229A0-AD9C-EDAC-A74A-8A9C1889542D" name="type_food_consumed_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:06:18 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C2C0A0C0-7FC2-A86E-C051-297C869A56A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="946B651A-E090-33AE-3E29-B470F38CA913" name="type_food_consumed_user_food_consumed_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:08:29 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3160852B-360E-ABED-6AD7-D45AAD796A32"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

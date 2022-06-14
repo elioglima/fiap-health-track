@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="36F6F9E1-ADC5-C1AD-4930-98FAFC4E8D59" mainViewID="DBD751A0-F718-BE88-6212-238541D445B9">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:06:42 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

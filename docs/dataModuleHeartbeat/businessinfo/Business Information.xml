@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="625BAA74-DD8D-DBF2-A12A-629C93A4783C">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:06:42 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FAF9663D-B63F-E9A5-1AAC-F84584F77115" name="user_bloodpressure">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:42:41 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="75E5F55B-82A2-42B2-553B-8430F36BB51F">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:43:39 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_blood_pressure_id</notNullConstraintName>
+</Column>
+<Column name="user_id" id="C820A094-B6C7-75BD-8432-21725085A780">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:43:39 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35C5E0B4-2433-4822-1C53-79FD3852F33A" referredColumn="8A0F412E-B9CB-3E61-11BF-BCA613168BD8"/>
+</associations>
+</Column>
+<Column name="value" id="AF2E40F6-2B39-A43D-C03D-8F0EECE43888">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:43:39 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,18,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3931951F-98D3-00A3-8C40-5B1A29109DA9" name="user_blood_pressure_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:43:39 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75E5F55B-82A2-42B2-553B-8430F36BB51F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="744DDA43-049B-D18D-FBEE-FCAABAFD7D97" name="user_blood_pressure_user_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:43:44 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C820A094-B6C7-75BD-8432-21725085A780"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

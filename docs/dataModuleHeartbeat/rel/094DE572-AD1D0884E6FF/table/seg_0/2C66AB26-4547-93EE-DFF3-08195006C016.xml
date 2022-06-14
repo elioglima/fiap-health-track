@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2C66AB26-4547-93EE-DFF3-08195006C016" name="user">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:18:00 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="8A0F412E-B9CB-3E61-11BF-BCA613168BD8">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_id</notNullConstraintName>
+</Column>
+<Column name="mail" id="FE74F6B0-06DC-68C0-AA4A-BF9216BE8C2A">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_mail</notNullConstraintName>
+</Column>
+<Column name="name" id="1416E1B6-95AA-56A4-AD4E-C159EF6B4042">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_name</notNullConstraintName>
+</Column>
+<Column name="phone_mobile" id="1A725918-483B-E0AB-0FCA-6EE65B760C6D">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:25:49 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth_date" id="C77F5D7B-184F-EB85-15D5-9C605BD155D7">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="verify_mail" id="852F8115-4FE5-16DA-312C-3351D44E19AB">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT042</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="at_create" id="85085878-CA02-DC1B-54A7-CADDA80AACB1">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_atCreate</notNullConstraintName>
+</Column>
+<Column name="at_update" id="03DB98C6-6AED-A2A1-B770-16BCEB759029">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_atUpdate</notNullConstraintName>
+</Column>
+<Column name="at_logeed" id="F0A248D8-FEBD-D1EB-BA30-5C21512C0C11">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="active" id="768BA070-FC62-072D-D364-53243F014D03">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DBB8AAD-E287-EA6D-5753-A9C4413CCBBB" name="user_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:33:53 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A0F412E-B9CB-3E61-11BF-BCA613168BD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

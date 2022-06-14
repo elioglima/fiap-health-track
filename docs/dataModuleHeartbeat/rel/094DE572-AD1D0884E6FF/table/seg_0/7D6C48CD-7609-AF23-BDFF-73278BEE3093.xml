@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D6C48CD-7609-AF23-BDFF-73278BEE3093" name="languages">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:50:11 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="7A037F8C-730B-831C-C853-F3859C60C1D3">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:51:22 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_languages_id</notNullConstraintName>
+</Column>
+<Column name="description" id="52CAA340-70EF-DFFA-6368-2557B0143B73">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:51:22 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_languages_description</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="176925F7-B20A-D375-6ED2-8B26BCA1CA34" name="languages_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:52:35 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A037F8C-730B-831C-C853-F3859C60C1D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

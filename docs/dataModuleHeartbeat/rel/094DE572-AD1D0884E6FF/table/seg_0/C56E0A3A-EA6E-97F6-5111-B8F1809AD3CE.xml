@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C56E0A3A-EA6E-97F6-5111-B8F1809AD3CE" name="user_profile">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:48:52 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="88E62F6B-6A90-22B9-6226-279B066BA612">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:50:03 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_profile_id</notNullConstraintName>
+</Column>
+<Column name="user_id" id="AFBEC0D4-2A04-211A-F549-F91AFF5561EC">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:50:03 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_profile_user_id</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="EBE21305-76DE-F3E8-14F8-059373E96766" referredColumn="8A0F412E-B9CB-3E61-11BF-BCA613168BD8"/>
+</associations>
+</Column>
+<Column name="languages_id" id="EF16096E-CAD9-CA08-C5E3-9BA65903C8B4">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:50:03 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_profile_languages_id</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="CED59BB3-597F-0BF5-9DD5-8DF4E7844D4F" referredColumn="7A037F8C-730B-831C-C853-F3859C60C1D3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FCA6E97C-C433-3049-A2A2-7DBEE2B1BDCE" name="user_profile_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:52:32 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88E62F6B-6A90-22B9-6226-279B066BA612"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E8C62899-99F4-D6BF-C74E-44966AB74D1C" name="user_profile_user_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:53:34 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AFBEC0D4-2A04-211A-F549-F91AFF5561EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21648192-82A7-7CA1-7BED-06A83B70C344" name="user_profile_languages_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:54:10 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF16096E-CAD9-CA08-C5E3-9BA65903C8B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

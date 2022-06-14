@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8451F8A1-AEB6-56DB-2420-43C3AF948EE8" name="user_physicalactivity">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:49:04 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6B8923CF-2D61-FF49-A904-3F25A6D42933">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:53:10 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_physical_activity_id</notNullConstraintName>
+</Column>
+<Column name="user_id" id="08221355-65F2-830A-6DAC-3E470D6390B9">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:53:10 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF40D5BF-8FAE-BEA1-8EED-F83141F7FAF2" referredColumn="8A0F412E-B9CB-3E61-11BF-BCA613168BD8"/>
+</associations>
+</Column>
+<Column name="type_phyactivity_id" id="1267A8EB-1F7D-B21E-44B0-808A369DFB9E">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:43:35 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_physical_activity_type_phyactivity_id</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="3D5FD5D3-94BA-48B4-FCAE-D99D61006A5F" referredColumn="E2E8042C-68EE-064E-29CF-267D9BD7A43A"/>
+</associations>
+</Column>
+<Column name="time_activity_minute" id="BA8A9A4A-2FF3-1871-6DB2-D8848DB3F058">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:53:10 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="value_calorie" id="5D4B3FAA-2038-237D-F039-1325818BB244">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:09:28 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,18,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E7C4AA3C-7B5E-B56C-A6E3-4BEDAC9C14D5" name="user_physical_activity_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:53:10 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B8923CF-2D61-FF49-A904-3F25A6D42933"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2563AF9A-6525-BE73-4638-5EE33FC3B05C" name="user_physical_activity_user_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 17:54:49 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08221355-65F2-830A-6DAC-3E470D6390B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A5DFBF3-5BDB-424B-ED21-64C5714B9933" name="user_physical_activity_type_phyactivity_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 18:43:35 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1267A8EB-1F7D-B21E-44B0-808A369DFB9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

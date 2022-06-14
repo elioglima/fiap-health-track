@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0B646EAE-97B1-6C60-903E-7768AA3B031E" name="user_alerts">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:45:38 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B462271C-3138-40D2-B99E-75D137C00BF0">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:47:28 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_alerts_id</notNullConstraintName>
+</Column>
+<Column name="user_id" id="6F101C65-1703-50B4-1DC4-A54BD418282D">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:47:28 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_alerts_user_id</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="4B592BDD-D8AE-CF93-A7C5-73D2859E969F" referredColumn="8A0F412E-B9CB-3E61-11BF-BCA613168BD8"/>
+</associations>
+</Column>
+<Column name="heartbeats_max" id="0B43E83C-14BF-1EA3-6C5C-E6BAE827D44B">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:47:28 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,18,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_alerts_heartbeats_max</notNullConstraintName>
+</Column>
+<Column name="heartbeats_min" id="EF7185BF-416C-44E0-5FDC-F102BC0245A9">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:47:28 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,18,3</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_alerts_heartbeats_min</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE0BF37E-7161-4BC1-B2AA-84B282AF9102" name="user_alerts_user_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:47:35 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F101C65-1703-50B4-1DC4-A54BD418282D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

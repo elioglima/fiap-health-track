@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44A14111-07A2-75BE-A954-267870A392D4" name="user_address">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:34:11 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="E0A3A60F-A1FE-B449-8FD6-D5E2B130558F">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:37:33 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_id</notNullConstraintName>
+</Column>
+<Column name="user_id" id="5C95F862-B07F-D923-4D80-27BF86476400">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:39:03 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_user_id</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="D17ED55A-1838-2801-0085-348E37A8D117" referredColumn="8A0F412E-B9CB-3E61-11BF-BCA613168BD8"/>
+</associations>
+</Column>
+<Column name="address" id="BAFD771F-77BD-8BEC-B59C-8BA4F6DB47F7">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:37:33 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_address</notNullConstraintName>
+</Column>
+<Column name="number" id="9C084D4C-F2D4-38D0-7E0E-72BFCECD1D10">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:37:33 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_number</notNullConstraintName>
+</Column>
+<Column name="district" id="54B82257-3123-22BF-8AD7-2FD47660BAA9">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:37:33 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_district</notNullConstraintName>
+</Column>
+<Column name="city" id="C0778867-D78A-26D9-DA46-3D0E6AAFFFD0">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:37:33 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_city</notNullConstraintName>
+</Column>
+<Column name="state" id="76EB243D-4093-C408-699E-F03C8486A23A">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:37:33 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_state</notNullConstraintName>
+</Column>
+<Column name="unit" id="049BEAA2-F479-4450-29E1-B8B22303959B">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:37:33 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_user_address_unit</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="407EB37F-CB62-FABD-E69E-D60F30F6EB37" name="user_address_PK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:52:40 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0A3A60F-A1FE-B449-8FD6-D5E2B130558F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F0B4651-4DFC-F171-20DE-5C80C63E14C3" name="user_address_user_FK">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:39:11 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C95F862-B07F-D923-4D80-27BF86476400"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

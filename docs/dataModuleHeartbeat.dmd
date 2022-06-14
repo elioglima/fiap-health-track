@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="dataModuleHeartbeat" id="73FB0726-7115-FAD3-9A6A-ABA3847240AF" version="3.5">
+<createdBy>eliod</createdBy>
+<createdTime>2022-05-19 16:06:42 UTC</createdTime>
+<ownerDesignName>dataModuleHeartbeat</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>73FB0726-7115-FAD3-9A6A-ABA3847240AF</designId>
+</OSDM_Design>
